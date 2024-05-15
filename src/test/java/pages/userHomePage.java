@@ -10,5 +10,4 @@ public class userHomePage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-
 }
