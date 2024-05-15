@@ -66,7 +66,7 @@ public class UserHomePage {
     @FindBy (className = "text-info small") // Homepage>> SignInButton / Forgot Password Button
     public WebElement forgotPasswordButton;
 
-    @FindBy (className ="btn btn-primary btn-cons m-t-10") // Homepage>> SignInButton /Login Button
+    @FindBy (css = "button[type='submit']") // Homepage>> SignInButton /Login Button
     public WebElement loginButton;
 
     @FindBy(id ="name") // Homepage>> SignUpButton / User Name Text Box
@@ -81,29 +81,26 @@ public class UserHomePage {
     @FindBy (id = "password-confirm") // Homepage>> SignUpButton / Password Confirm Tex Box
     public WebElement passwordConfirmTextBox;
 
-    @FindBy (className = "btn btn-primary btn-cons m-t-10") // Homepage>> SignUpButton / Sign Up Button
-    public WebElement signUpButton;
-
+    @FindBy (xpath = "//button[@type='submit']") // Homepage>> SignUpButton / Sign Up Button
+    public WebElement signUpKayitButton;
 
     @FindBy(xpath = "//*[text()='Wellness']")
-    public WebElement Welnessimage;                                                //HomePage / Body / Departmens / Wellness
-
+    public WebElement welnessImage;                                                //HomePage / Body / Departmens / Wellness
 
     @FindBy(xpath = "//*[@alt='Vaccinations']")
-    public WebElement Vaccinationsimage;                                            //HomePage  / Body / Departmesn / Vaccinations
-
+    public WebElement vaccinationsImage;                                            //HomePage  / Body / Departmesn / Vaccinations
 
     @FindBy(xpath = "//*[@alt='Dr. Alejandro Martinez']")
-    public WebElement DrAlejandRoMartinesimage;                                     //HomePage / Body / Doctors / DrAlejandRo
+    public WebElement drAlejandRoMartinesimage;                                     //HomePage / Body / Doctors / DrAlejandRo
 
     @FindBy(xpath = "//*[@alt='Dr. Olivia Bennett']")
-    public WebElement DrOliviaBennetimage;                                          //HomePage / Body / Doctors / DrOlivaBennet
+    public WebElement drOliviaBennetImage;                                          //HomePage / Body / Doctors / DrOlivaBennet
 
     @FindBy(xpath = "//*[@alt='Rabies Vaccine']")
-    public WebElement RabiesVaccinationsimage;                                       //HomePage / Body / VaccinationsForPets / RabbiesVaccinations
+    public WebElement rabiesVaccinationsImage;                                       //HomePage / Body / VaccinationsForPets / RabbiesVaccinations
 
     @FindBy(xpath = "//*[@alt='Bordetella (Kennel Cough) Vaccine']")
-    public WebElement Bordetellaimage;                                                //HomePage / Body / VaccinationsForPets / Bordetella
+    public WebElement bordetellaImage;                                                //HomePage / Body / VaccinationsForPets / Bordetella
 
 
 
