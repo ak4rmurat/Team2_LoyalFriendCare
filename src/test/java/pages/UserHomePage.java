@@ -10,6 +10,32 @@ public class UserHomePage {
     public UserHomePage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
     @FindBy(id ="email") // Homepage>> SignInButton / e_mail Text Box
     public WebElement emailTextBox;
 
