@@ -3,12 +3,11 @@ package pages;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class adminDashboardPage {
+public class UserHomePage {
 
-    public adminDashboardPage(){
-
+    public UserHomePage(){
         PageFactory.initElements(Driver.getDriver(),this);
-
-
     }
+
+
 }
