@@ -12,10 +12,10 @@ public class MedicinesPage {
     }
 
     @FindBy(xpath = "(//img[@class='img-fluid'])[1]")
-    public WebElement imageRimadylMedicine; //  Home >> MedicinesPage
+    public WebElement rimadylMedicineImage; //  Home >> MedicinesPage
 
     @FindBy(xpath = "(//img[@class='img-fluid'])[2]")
-    public WebElement imageRevolutionlMedicine; //  Home >> MedicinesPage
+    public WebElement revolutionlMedicineImage; //  Home >> MedicinesPage
 
 
 }
