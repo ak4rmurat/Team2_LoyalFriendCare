@@ -11,6 +11,8 @@ public class VaccinationsPage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
+
+
     @FindBy(xpath = "(//img[@class='img-fluid'])[1]")
     public WebElement rabbiesVaccineImage; //  Home >> VacciantionsPage
 
@@ -34,6 +36,11 @@ public class VaccinationsPage {
 
     @FindBy(xpath = "(//img[@class='img-fluid'])[8]")
     public WebElement surgicalProcedureVaccineImage; //  Home >> VacciantionsPage
+
+
+
+@FindBy(xpath = "//*[text()='Vaccinations of LoyalFriendCare']")
+public WebElement vaccinationsimage;          // Goruntulenen Vaccinations  sayfa'nın sol tarafında bulunan Ası secenekleri goruntulenir.
 
 
 

@@ -53,6 +53,9 @@ public class UserHomePage {
     @FindBy(xpath = "//a[normalize-space()='Sign Up']")
     public WebElement signUpButton; //HomePage>>Header>>SignUpButton
 
+    @FindBy(xpath = "//input[@id='email']")
+    public WebElement emailTexBoxForget; //HomePage>>Header>>SignInButton>>Forgot Password
+
     @FindBy(id ="email") // Homepage>> SignInButton / e_mail Text Box
     public WebElement emailTextBox;
 
@@ -99,12 +102,15 @@ public class UserHomePage {
    public WebElement rabiesVaccinationsImage;                                       //HomePage / Body / VaccinationsForPets / RabbiesVaccinations
 
    @FindBy(xpath = "//*[@alt='Bordetella (Kennel Cough) Vaccine']")
-   public WebElement bordetellaImage;                                                //HomePage / Body / VaccinationsForPets / Bordetella
+   public WebElement bordetellaImage;                                               //HomePage / Body / VaccinationsForPets / Bordetella
 
     @FindBy(xpath = "//a[normalize-space()='Sign Out']")
     public WebElement signOutButton; // Homepage header / Sign Out Button
 
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement sendPasswordResetLink; //HomePage>>Header>>SignInButton>>Forgot Password
 
-
+    @FindBy(xpath = "//div[@role='alert']")
+    public WebElement resetPasswordSuccess; //HomePage>>Header>>SignInButton>>Forgot Password
 
 }
