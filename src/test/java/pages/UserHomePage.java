@@ -44,7 +44,7 @@ public class UserHomePage {
     @FindBy(xpath = "//nav[@id='menu']//a[normalize-space()='Medicines']")
     public WebElement medicinesDropDown; //HomePage>>Header>>MedicinesDropDown
 
-    @FindBy(xpath = "///nav[@id='menu']//a[normalize-space()='Vaccinations']")
+    @FindBy(xpath = "//nav[@id='menu']//a[normalize-space()='Vaccinations']")
     public WebElement vaccinationsDropDown; //HomePage>>Header>>VaccinationsDropDown
 
     @FindBy(xpath = "//a[normalize-space()='Sign In']")
