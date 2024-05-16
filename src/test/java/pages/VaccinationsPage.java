@@ -14,28 +14,28 @@ public class VaccinationsPage {
 
 
     @FindBy(xpath = "(//img[@class='img-fluid'])[1]")
-    public WebElement imageRabbiesVaccine; //  Home >> VacciantionsPage
+    public WebElement rabbiesVaccineImage; //  Home >> VacciantionsPage
 
     @FindBy(xpath = "(//img[@class='img-fluid'])[2]")
-    public WebElement imageDHPPVaccine; //  Home >> VacciantionsPage
+    public WebElement dHPPVaccineImage; //  Home >> VacciantionsPage
 
     @FindBy(xpath = "(//img[@class='img-fluid'])[3]")
-    public WebElement imageFelineLeukemiaVaccine; //  Home >> VacciantionsPage
+    public WebElement felineLeukemiaVaccineImage; //  Home >> VacciantionsPage
 
     @FindBy(xpath = "(//img[@class='img-fluid'])[4]")
-    public WebElement imageFelineImmunodeficiencyVaccine; //  Home >> VacciantionsPage
+    public WebElement felineImmunodeficiencyVaccineImage; //  Home >> VacciantionsPage
 
     @FindBy(xpath = "(//img[@class='img-fluid'])[5]")
-    public WebElement imageBordetellaVaccine; //  Home >> VacciantionsPage
+    public WebElement bordetellaVaccineImage; //  Home >> VacciantionsPage
 
     @FindBy(xpath = "(//img[@class='img-fluid'])[6]")
-    public WebElement imageFelinePanleukopeniaVaccine; //  Home >> VacciantionsPage
+    public WebElement felinePanleukopeniaVaccineImage; //  Home >> VacciantionsPage
 
     @FindBy(xpath = "(//img[@class='img-fluid'])[7]")
-    public WebElement imageFelineHerpesvirusVaccine; //  Home >> VacciantionsPage
+    public WebElement felineHerpesvirusVaccineImage; //  Home >> VacciantionsPage
 
     @FindBy(xpath = "(//img[@class='img-fluid'])[8]")
-    public WebElement imageSurgicalProcedureVaccine; //  Home >> VacciantionsPage
+    public WebElement surgicalProcedureVaccineImage; //  Home >> VacciantionsPage
 
 
 

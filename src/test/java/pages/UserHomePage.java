@@ -72,16 +72,16 @@ public class UserHomePage {
    public WebElement loginButton;
 
    @FindBy(id ="name") // Homepage>> SignUpButton / User Name Text Box
-   public WebElement userNameTextBox;
+   public WebElement userNameKayitTextBox;
 
-   @FindBy (xpath = "//input[@class='form-control'] ") // Homepage>> SignUpButton / e_mail Text Box
-   public WebElement emailAddressTextBox;
+   @FindBy (xpath = "//input[@id='email']") // Homepage>> SignUpButton / e_mail Text Box
+   public WebElement emailAddressKayitTextBox;
 
-   @FindBy (xpath = "//input[@id='password'] ") // Homepage>> SignUpButton / Password Text Box
-   public WebElement newpasswordTextBox;
+   @FindBy (xpath = "//input[@id='password']") // Homepage>> SignUpButton / Password Text Box
+   public WebElement newpasswordKayitTextBox;
 
    @FindBy (id = "password-confirm") // Homepage>> SignUpButton / Password Confirm Tex Box
-   public WebElement passwordConfirmTextBox;
+   public WebElement passwordConfirmKayitTextBox;
 
    @FindBy (xpath = "//button[@type='submit']") // Homepage>> SignUpButton / Sign Up Button
    public WebElement signUpKayitButton;
@@ -102,7 +102,10 @@ public class UserHomePage {
    public WebElement rabiesVaccinationsImage;                                       //HomePage / Body / VaccinationsForPets / RabbiesVaccinations
 
    @FindBy(xpath = "//*[@alt='Bordetella (Kennel Cough) Vaccine']")
-   public WebElement bordetellaImage;                                                //HomePage / Body / VaccinationsForPets / Bordetella
+   public WebElement bordetellaImage;                                               //HomePage / Body / VaccinationsForPets / Bordetella
+
+    @FindBy(xpath = "//a[normalize-space()='Sign Out']")
+    public WebElement signOutButton; // Homepage header / Sign Out Button
 
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement sendPasswordResetLink; //HomePage>>Header>>SignInButton>>Forgot Password
