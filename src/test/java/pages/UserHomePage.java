@@ -87,19 +87,19 @@ public class UserHomePage {
    public WebElement signUpKayitButton;
 
    @FindBy(xpath = "//*[text()='Wellness']")
-   public WebElement welnessImage;                                                //HomePage / Body / Departmens / Wellness
+   public WebElement welnessImage;         //HomePage / Body / Departmens / Wellness
 
    @FindBy(xpath = "//*[@alt='Vaccinations']")
-   public WebElement vaccinationsImage;                                            //HomePage  / Body / Departmesn / Vaccinations
+   public WebElement vaccinationsImage;   //HomePage  / Body / Departmesn / Vaccinations
 
    @FindBy(xpath = "//*[@alt='Dr. Alejandro Martinez']")
-   public WebElement drAlejandRoMartinesimage;                                     //HomePage / Body / Doctors / DrAlejandRo
+   public WebElement drAlejandRoMartinesimage;   //HomePage / Body / Doctors / DrAlejandRo
 
    @FindBy(xpath = "//*[@alt='Dr. Olivia Bennett']")
-   public WebElement drOliviaBennetImage;                                          //HomePage / Body / Doctors / DrOlivaBennet
+   public WebElement drOliviaBennetImage;    //HomePage / Body / Doctors / DrOlivaBennet
 
    @FindBy(xpath = "//*[@alt='Rabies Vaccine']")
-   public WebElement rabiesVaccinationsImage;                                       //HomePage / Body / VaccinationsForPets / RabbiesVaccinations
+   public WebElement rabiesVaccinationsImage;    //HomePage / Body / VaccinationsForPets / RabbiesVaccinations
 
    @FindBy(xpath = "//*[@alt='Bordetella (Kennel Cough) Vaccine']")
    public WebElement bordetellaImage;                                               //HomePage / Body / VaccinationsForPets / Bordetella
