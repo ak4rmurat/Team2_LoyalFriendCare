@@ -46,7 +46,7 @@ public class US_019 {
         VaccinationsPage vaccinationsPage=new VaccinationsPage();
         vaccinationsPage.vaccinationsimage.isDisplayed();
 
-        vaccinationsPage.imageRabbiesVaccine.click();
+        //vaccinationsPage.imageRabbiesVaccine.click();
 
         AppointmentBookingPage appointmentBookingPage=new AppointmentBookingPage();
 
