@@ -76,6 +76,13 @@ public class AdminDashboardPage {
     @FindBy(xpath = "//a[normalize-space()='Create Bed managers']")
     public WebElement createBedManagersButton; // Admin Dashboard >> Bed Managers >> Create Bed Managers
 
+    @FindBy(xpath = "//div[@class='card-title']")
+    public WebElement tableRolesText; // Admin Dasboard >> Roles >> Roles
+
+    @FindBy(xpath = "//div[@id='tableWithSearch_info']")
+    public WebElement numberOfRolesText; // Admin Dasboard >> Roles >> Roles
+
+
 
 
 
