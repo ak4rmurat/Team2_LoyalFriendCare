@@ -36,6 +36,7 @@ public class US_035 {
         ReusableMethods.wait(5);
 
         //5-Sayfanın soluna hover yapilir
+        adminDashboardPage.dashBoardMenu.click();
         actions.moveToElement(adminDashboardPage.dashBoardMenu).click();
 
         //6-Acilan dasboardda Roles yazisina tiklanir
