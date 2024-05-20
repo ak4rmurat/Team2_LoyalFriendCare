@@ -79,6 +79,35 @@ public class AdminDashboardPage {
 
 
 
+    //AdminDashboard Pets Adsense DropDown Menusu
+
+  @FindBy(xpath = "//*[@class='bg-primary icon-thumbnail']")
+    public WebElement admindasboard;
+
+   @FindBy(xpath = "//*[text()='Pets adsense'][1]")
+    public WebElement petsButton;
+
+   @FindBy(xpath = "//a[text()='Pets adsense']")
+    public WebElement petManagerPetsButton;
+
+   @FindBy(xpath = "//a[text()='Create Pets adsense']")
+    public  WebElement createPetsManagersButton;
+
+   @FindBy(xpath = "//*[@class='select2-selection__rendered'][1]")
+    public WebElement createPetsHome;
+
+   @FindBy(xpath = "//*[@class='switchery switchery-default']")
+    public WebElement ActivePets;
+
+   @FindBy(xpath = "//*[@title='Code']")
+    public WebElement createPetsType;
+
+   @FindBy(xpath = "//*[@role='treeitem'][2]")
+    public WebElement createPetsImage;
+
+
+
+
 
 
 
