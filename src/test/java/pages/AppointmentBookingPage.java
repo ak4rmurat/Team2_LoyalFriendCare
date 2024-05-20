@@ -43,4 +43,6 @@ public class AppointmentBookingPage {
     @FindBy(xpath = "//div[@role='alert']")
     public WebElement appointmentBookingText;//home>departments>herhangi dep>rezervazyon olusturulunca cikan yazi"Congratulations on your well-deserved success."
 
+    @FindBy(xpath = "//div[@role='alert']")
+    public WebElement conformatiomMassage;
 }

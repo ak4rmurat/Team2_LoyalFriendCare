@@ -37,5 +37,8 @@ public class US_008 {
         //"We have e-mailed your password reset link!" goruntulenebilir oldugunu test eder.
         Assert.assertTrue(userHomePage.resetPasswordSuccess.isDisplayed());
 
+        ReusableMethods.wait(2);
+        Driver.quitDriver();
+
     }
 }
