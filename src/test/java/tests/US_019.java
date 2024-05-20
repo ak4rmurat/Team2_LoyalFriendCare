@@ -46,7 +46,7 @@ public class US_019 {
         VaccinationsPage vaccinationsPage=new VaccinationsPage();
         vaccinationsPage.vaccinationsimage.isDisplayed();
 
-        vaccinationsPage.imageRabbiesVaccine.click();
+        vaccinationsPage.rabbiesVaccineImage.click();
 
         AppointmentBookingPage appointmentBookingPage=new AppointmentBookingPage();
 
@@ -72,7 +72,7 @@ public class US_019 {
 
         ReusableMethods.wait(4);
 
-          Driver.closeDriver();
+        Driver.quitDriver();
 
 
     }

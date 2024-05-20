@@ -29,6 +29,6 @@ public class US_008 {
         Assert.assertTrue(userHomePage.resetPasswordSuccess.isDisplayed());
 
         ReusableMethods.wait(2);
-        Driver.closeDriver();
+        Driver.quitDriver();
     }
 }

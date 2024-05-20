@@ -34,4 +34,6 @@ public class AppointmentBookingPage {
     @FindBy(xpath = "//*[@data-value='57']")
     public WebElement wellnessDropdownMenuDentalCare;
 
+    @FindBy(xpath = "//div[@role='alert']")
+    public WebElement conformatiomMassage;
 }

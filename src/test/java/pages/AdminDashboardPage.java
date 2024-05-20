@@ -16,7 +16,7 @@ public class AdminDashboardPage {
     @FindBy(xpath = "//a[normalize-space()='admin01']")
     public WebElement adminLoginButton; // Header / admin01 butonu
 
-    @FindBy(xpath = "//ul[@class='menu-items scroll-content scroll-scrolly_visible']")
+    @FindBy(xpath = "//span[@class='bg-primary icon-thumbnail']")
     public WebElement dashBoardMenu; // Admin Dashboard Menu
 
     @FindBy(xpath = "//span[normalize-space()='Departments']")
@@ -75,6 +75,28 @@ public class AdminDashboardPage {
 
     @FindBy(xpath = "//a[normalize-space()='Create Bed managers']")
     public WebElement createBedManagersButton; // Admin Dashboard >> Bed Managers >> Create Bed Managers
+
+    @FindBy(xpath = "//span[@class='title'][normalize-space()='Settings']")
+    public WebElement settingsButton; // Admin Dashboard Menu >> Settings
+
+    @FindBy(xpath = "//div[5]//div[1]//div[2]//div[1]//div[1]//div[1]//h3[1]//span[1]")
+    public WebElement youtubeSettingsInfo;  // Admin Dashboard Menu >> Settings >> youtube bilgisi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
