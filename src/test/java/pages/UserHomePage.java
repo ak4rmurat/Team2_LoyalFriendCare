@@ -108,9 +108,12 @@ public class UserHomePage {
     public WebElement signOutButton; // Homepage header / Sign Out Button
 
     @FindBy(xpath = "//button[@type='submit']")
-    public WebElement sendPasswordResetLink; //HomePage>>Header>>SignInButton>>Forgot Password
+    public WebElement sendPasswordResetLink; //HomePage >> Header >> SignInButton >> Forgot Password
 
     @FindBy(xpath = "//div[@role='alert']")
-    public WebElement resetPasswordSuccess; //HomePage>>Header>>SignInButton>>Forgot Password
+    public WebElement resetPasswordSuccess; //HomePage >> Header >> SignInButton >> Forgot Password
+
+    @FindBy(xpath = "//a[normalize-space()='admin01']")
+    public WebElement adminDashboardButton; //HomePage >> Header >> Admin Dashboard Button
 
 }
