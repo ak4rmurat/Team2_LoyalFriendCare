@@ -19,16 +19,16 @@ import static utilities.Driver.driver;
 public class US_004 {
 
 
+
+
+@Test
+public void TC_001 (){
     UserHomePage userHomePage = new UserHomePage();
     DepartmentsPage departmentsPage=new DepartmentsPage();
     DoctorsPage doctorsPage=new DoctorsPage();
     VaccinationsPage vaccinationsPage=new VaccinationsPage();
     Actions actions=new Actions(driver);
     SoftAssert softAssert=new SoftAssert();
-
-
-@Test
-public void TC_001 (){
 
     // 1 - Ziyaretci hedef Url ile Anasayfaya gider
 
@@ -125,7 +125,7 @@ public void TC_001 (){
 
 
 
-    Driver.getDriver().quit();
+    Driver.quitDriver();
 
 
     }

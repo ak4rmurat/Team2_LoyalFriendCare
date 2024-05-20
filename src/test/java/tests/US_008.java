@@ -10,16 +10,16 @@ import utilities.ReusableMethods;
 
 
 public class US_008 {
-    UserHomePage userHomePage = new UserHomePage();
 
     @AfterMethod
     public void close (){
         ReusableMethods.wait(2);
-        Driver.closeDriver();
+        Driver.quitDriver();
     }
 
     @Test
     public void TC_0801(){
+        UserHomePage userHomePage = new UserHomePage();
 
         //Kullanici sitenin "URL" 'ine gider.
         Driver.getDriver().get(ConfigReader.getProperty("url"));

@@ -1,20 +1,23 @@
 package tests;
 
+import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.AdminDashboardPage;
+import pages.AppointmentBookingPage;
 import pages.UserHomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 public class deneme {
-
-    UserHomePage userhomepage = new UserHomePage();
-    AdminDashboardPage adminDashboardPage = new AdminDashboardPage();
 
 
     @Test
     public void TC_2301(){
+        UserHomePage userhomepage = new UserHomePage();
+        AdminDashboardPage adminDashboardPage = new AdminDashboardPage();
+
         //Kayitli kullanici ilgili Url ile anasayfaya gider.
         Driver.getDriver().get(ConfigReader.getProperty("url"));
 
@@ -43,4 +46,6 @@ public class deneme {
 
 
     }
+
+
     }

@@ -5,6 +5,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.AppointmentBookingPage;
+import pages.DoctorsPage;
 import pages.UserHomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
@@ -13,13 +14,14 @@ import utilities.ReusableMethods;
 public class US_013 {
 
 
-    UserHomePage userHomePage = new UserHomePage();
-    AppointmentBookingPage appointmentBookingPage = new AppointmentBookingPage();
-    Actions actions = new Actions(Driver.getDriver());
-
 
     @Test
     public void TC_1301(){
+        UserHomePage userHomePage = new UserHomePage();
+        AppointmentBookingPage appointmentBookingPage = new AppointmentBookingPage();
+        Actions actions = new Actions(Driver.getDriver());
+
+
         //Kayitli kullanici ilgili Url ile anasayfaya gider.
         Driver.getDriver().get(ConfigReader.getProperty("url"));
 
@@ -53,7 +55,7 @@ public class US_013 {
 
         ReusableMethods.wait(1);
 
-        appointmentBookingPage.appointmenBookinDepartmanDropDown.click();
+        appointmentBookingPage.appointmentBookingDepartmanDropDown.click();
 
         ReusableMethods.wait(1);
 
@@ -78,6 +80,11 @@ public class US_013 {
 
     @Test
     public void TC_1302(){
+        UserHomePage userHomePage = new UserHomePage();
+        AppointmentBookingPage appointmentBookingPage = new AppointmentBookingPage();
+        Actions actions = new Actions(Driver.getDriver());
+        DoctorsPage doctorsPage = new DoctorsPage();
+
         //Kayitli kullanici ilgili Url ile anasayfaya gider.
         Driver.getDriver().get(ConfigReader.getProperty("url"));
 
@@ -119,6 +126,11 @@ public class US_013 {
     }
     @Test
     public void TC_1303(){
+        UserHomePage userHomePage = new UserHomePage();
+        AppointmentBookingPage appointmentBookingPage = new AppointmentBookingPage();
+        Actions actions = new Actions(Driver.getDriver());
+        DoctorsPage doctorsPage = new DoctorsPage();
+
         //Kayitli kullanici ilgili Url ile anasayfaya gider.
         Driver.getDriver().get(ConfigReader.getProperty("url"));
 

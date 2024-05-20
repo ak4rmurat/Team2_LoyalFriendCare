@@ -19,17 +19,16 @@ import static utilities.Driver.driver;
 import static utilities.Driver.getDriver;
 
 public class US_003 {
-    UserHomePage userHomePage = new UserHomePage();
-    DepartmentsPage departmentsPage=new DepartmentsPage();
-    DoctorsPage doctorsPage=new DoctorsPage();
-    VaccinationsPage vaccinationsPage=new VaccinationsPage();
-    Actions actions=new Actions(driver);
-    SoftAssert softAssert=new SoftAssert();
-
 
 
   @Test
    public void TC_001(){
+      UserHomePage userHomePage = new UserHomePage();
+      DepartmentsPage departmentsPage=new DepartmentsPage();
+      DoctorsPage doctorsPage=new DoctorsPage();
+      VaccinationsPage vaccinationsPage=new VaccinationsPage();
+      Actions actions=new Actions(driver);
+      SoftAssert softAssert=new SoftAssert();
 
 
         //1- Kullanıcı verilen url e gider
@@ -61,6 +60,12 @@ public class US_003 {
    }
     @Test
     public void TC_002(){
+        UserHomePage userHomePage = new UserHomePage();
+        DepartmentsPage departmentsPage=new DepartmentsPage();
+        DoctorsPage doctorsPage=new DoctorsPage();
+        VaccinationsPage vaccinationsPage=new VaccinationsPage();
+        Actions actions=new Actions(driver);
+        SoftAssert softAssert=new SoftAssert();
 
 
         //1- Kullanıcı verilen url e gider
@@ -89,6 +94,12 @@ public class US_003 {
     }
     @Test
     public void TC_003(){
+        UserHomePage userHomePage = new UserHomePage();
+        DepartmentsPage departmentsPage=new DepartmentsPage();
+        DoctorsPage doctorsPage=new DoctorsPage();
+        VaccinationsPage vaccinationsPage=new VaccinationsPage();
+        Actions actions=new Actions(driver);
+        SoftAssert softAssert=new SoftAssert();
 
 
         //1- Kullanıcı verilen url e gider

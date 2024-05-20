@@ -15,12 +15,13 @@ public class US_010 {
     @AfterMethod
     public void close (){
         ReusableMethods.wait(2);
-        Driver.closeDriver();
+        Driver.quitDriver();
     }
 
     @Test
     public void TC_1001(){
 
+        UserHomePage userHomePage = new UserHomePage();
         //Kullanici sitenin "URL" 'ine gider.
         Driver.getDriver().get(ConfigReader.getProperty("url"));
 

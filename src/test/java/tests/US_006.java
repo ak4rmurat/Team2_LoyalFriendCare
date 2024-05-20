@@ -8,15 +8,15 @@ import utilities.Driver;
 import utilities.ReusableMethods;
 
 public class US_006 {
-    SoftAssert softAssert=new SoftAssert();
-    UserHomePage userHomePage=new UserHomePage();
-
-
 
     @Test
     public void TC0601(){
+        SoftAssert softAssert=new SoftAssert();
+        UserHomePage userHomePage=new UserHomePage();
 
-         ////Ziyaretci  ilgili Url gider.
+
+
+        ////Ziyaretci  ilgili Url gider.
         Driver.getDriver().get(ConfigReader.getProperty("url"));
 
         //Ana sayfanın goruntulenebilir oldugu dogrulanir.
@@ -34,9 +34,12 @@ public class US_006 {
 
     @Test
     public void TC0602(){
+        SoftAssert softAssert=new SoftAssert();
+        UserHomePage userHomePage=new UserHomePage();
 
 
-             //Ziyaretci  ilgili Url gider.
+
+        //Ziyaretci  ilgili Url gider.
         Driver.getDriver().get(ConfigReader.getProperty("url"));
 
         //Ana sayfanın goruntulenebilir oldugu dogrulanir.
@@ -91,7 +94,7 @@ public class US_006 {
 
 
 
-        Driver.closeDriver();
+        Driver.quitDriver();
 
 
 

@@ -14,19 +14,19 @@ import utilities.Driver;
 import utilities.ReusableMethods;
 
 public class US_021 {
-    UserHomePage userHomePage = new UserHomePage();
-    AdminDashboardPage adminDashboardPage = new AdminDashboardPage();
-    Actions actions = new Actions(Driver.getDriver());
+
 
     @AfterMethod
     public void close (){
         ReusableMethods.wait(2);
-        Driver.closeDriver();
+        Driver.quitDriver();
     }
 
     @Test
     public void TC_2101(){
-
+        UserHomePage userHomePage = new UserHomePage();
+        AdminDashboardPage adminDashboardPage = new AdminDashboardPage();
+        Actions actions = new Actions(Driver.getDriver());
         //Kullanici sitenin "URL" 'ine gider.
         Driver.getDriver().get(ConfigReader.getProperty("url"));
 

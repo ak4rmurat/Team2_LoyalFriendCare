@@ -13,15 +13,15 @@ import utilities.ReusableMethods;
 
 public class US_022 {
 
-    SoftAssert softAssert=new SoftAssert();
-    UserHomePage userHomePage=new UserHomePage();
-    AdminDashboardPage adminDashboardPage=new AdminDashboardPage();
 
-    Actions actions=new Actions(Driver.getDriver());
+
 
     @Test
     public void test(){
-
+        SoftAssert softAssert=new SoftAssert();
+        UserHomePage userHomePage=new UserHomePage();
+        AdminDashboardPage adminDashboardPage=new AdminDashboardPage();
+        Actions actions=new Actions(Driver.getDriver());
          //Kullanıcı hedef Url Gider.
         Driver.getDriver().get(ConfigReader.getProperty("url"));
 
@@ -65,7 +65,7 @@ public class US_022 {
 
          ReusableMethods.wait(1);
 
-         Driver.closeDriver();
+         Driver.quitDriver();
 
 
 
@@ -76,6 +76,10 @@ public class US_022 {
     }
     @Test
     public void test01(){
+        SoftAssert softAssert=new SoftAssert();
+        UserHomePage userHomePage=new UserHomePage();
+        AdminDashboardPage adminDashboardPage=new AdminDashboardPage();
+        Actions actions=new Actions(Driver.getDriver());
 
         //Kullanıcı hedef Url Gider.
         Driver.getDriver().get(ConfigReader.getProperty("url"));
@@ -151,7 +155,7 @@ public class US_022 {
 
        ReusableMethods.wait(3);
 
-       Driver.closeDriver();
+       Driver.quitDriver();
 
 
 

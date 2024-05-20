@@ -15,12 +15,12 @@ import utilities.ReusableMethods;
 
 public class US_019 {
 
-    SoftAssert softAssert=new SoftAssert();
-    VaccinationsPage vaccinationsPage=new VaccinationsPage();
 
 
     @Test
     public void TC1901() {
+        SoftAssert softAssert=new SoftAssert();
+        VaccinationsPage vaccinationsPage=new VaccinationsPage();
 
 
         //Kullanıcı Url Gider.
@@ -30,7 +30,7 @@ public class US_019 {
 
         String actual = Driver.getDriver().getCurrentUrl();
 
-        SoftAssert softAssert = new SoftAssert();
+
 
         softAssert.assertEquals(expectedUrl, actual, "Anasayfa goruntulenebilir");
 
@@ -49,7 +49,7 @@ public class US_019 {
 
         userHomePage.vaccinationsDropDown.click();
 
-        VaccinationsPage vaccinationsPage = new VaccinationsPage();
+
         vaccinationsPage.vaccinationsimage.isDisplayed();
 
 

@@ -13,11 +13,6 @@ import utilities.ReusableMethods;
 
 public class US_012 {
 
-    UserHomePage userHomePage = new UserHomePage();
-    AppointmentBookingPage appointmentBookingPage = new AppointmentBookingPage();
-    Actions actions = new Actions(Driver.getDriver());
-
-
 
 
 
@@ -25,8 +20,14 @@ public class US_012 {
 
     @Test
     public void TC_1201() {
+        UserHomePage userHomePage = new UserHomePage();
+        AppointmentBookingPage appointmentBookingPage = new AppointmentBookingPage();
+        Actions actions = new Actions(Driver.getDriver());
 
-    //Kayitli kullanici ilgili Url ile anasayfaya gider.
+
+
+
+        //Kayitli kullanici ilgili Url ile anasayfaya gider.
         Driver.getDriver().get(ConfigReader.getProperty("url"));
 
     //Header bolumundeki sign in butonuna tiklar ve login sayfasina gider.
@@ -89,6 +90,12 @@ public class US_012 {
 
     @Test
     public void TC_1202(){
+        UserHomePage userHomePage = new UserHomePage();
+        AppointmentBookingPage appointmentBookingPage = new AppointmentBookingPage();
+        Actions actions = new Actions(Driver.getDriver());
+
+
+
         //Kayitli kullanici ilgili Url ile anasayfaya gider.
         Driver.getDriver().get(ConfigReader.getProperty("url"));
 
@@ -123,7 +130,7 @@ public class US_012 {
 
         ReusableMethods.wait(1);
 
-        appointmentBookingPage.appointmenBookinDepartmanDropDown.click();
+        appointmentBookingPage.appointmentBookingDepartmanDropDown.click();
 
         ReusableMethods.wait(1);
 

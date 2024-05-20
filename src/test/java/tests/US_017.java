@@ -18,19 +18,20 @@ import utilities.ReusableMethods;
 
 public class US_017 {
 
-    UserHomePage userHomePage = new UserHomePage();
-    DoctorsPage doctorsPage = new DoctorsPage();
-    AppointmentBookingPage appointmentBookingPage = new AppointmentBookingPage();
-    Actions actions = new Actions(Driver.getDriver());
 
     @AfterMethod
     public void close (){
         ReusableMethods.wait(2);
-        Driver.closeDriver();
+        Driver.quitDriver();
     }
 
     @Test
     public void TC_1701(){
+
+        UserHomePage userHomePage = new UserHomePage();
+        DoctorsPage doctorsPage = new DoctorsPage();
+        AppointmentBookingPage appointmentBookingPage = new AppointmentBookingPage();
+        Actions actions = new Actions(Driver.getDriver());
 
         //Kullanici sitenin "URL" 'ine gider.
         Driver.getDriver().get(ConfigReader.getProperty("url"));
@@ -55,6 +56,11 @@ public class US_017 {
 
     @Test
     public void TC_1702(){
+
+        UserHomePage userHomePage = new UserHomePage();
+        DoctorsPage doctorsPage = new DoctorsPage();
+        AppointmentBookingPage appointmentBookingPage = new AppointmentBookingPage();
+        Actions actions = new Actions(Driver.getDriver());
 
         //Kullanici sitenin "URL" 'ine gider.
         Driver.getDriver().get(ConfigReader.getProperty("url"));
@@ -114,6 +120,11 @@ public class US_017 {
 
     @Test
     public void TC_1704(){
+
+        UserHomePage userHomePage = new UserHomePage();
+        DoctorsPage doctorsPage = new DoctorsPage();
+        AppointmentBookingPage appointmentBookingPage = new AppointmentBookingPage();
+        Actions actions = new Actions(Driver.getDriver());
 
         //Kullanici sitenin "URL" 'ine gider.
         Driver.getDriver().get(ConfigReader.getProperty("url"));
