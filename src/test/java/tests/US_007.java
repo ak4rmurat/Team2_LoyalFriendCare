@@ -44,6 +44,7 @@ public class US_007 {
 
     @Test
     public void TC_002(){
+
        // 1 - Ziyaretci hedef URL'e gider
         Driver.getDriver().get("https://qa.loyalfriendcare.com/en/login");
        // 2 - "Sign In" butonuna tiklar
@@ -66,6 +67,7 @@ public class US_007 {
     }
     @Test
     public void TC_003(){
+
         // 1 - Ziyaretci hedef URL'e gider
         Driver.getDriver().get("https://qa.loyalfriendcare.com/en/login");
         // 2 - "Sign In" butonuna tiklar
@@ -93,6 +95,7 @@ public class US_007 {
 
 
         Driver.quitDriver();
+
 
     }
 }

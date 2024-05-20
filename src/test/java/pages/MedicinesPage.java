@@ -7,8 +7,7 @@ import utilities.Driver;
 
 public class MedicinesPage {
 
-    public MedicinesPage(){
-        PageFactory.initElements(Driver.getDriver(),this);
+    public MedicinesPage(){PageFactory.initElements(Driver.getDriver(),this);
     }
 
     @FindBy(xpath = "(//img[@class='img-fluid'])[1]")
