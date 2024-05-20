@@ -161,7 +161,17 @@ public class AdminDashboardPage {
     public WebElement createPetsImage;
 
 
+    @FindBy(xpath = "//div[@id='tableWithSearch_info']")
+    public WebElement doctorCountText;
 
+    @FindBy(xpath = "//a[text()='Add Doctors']")
+    public  WebElement addDoctorsButton;
+
+    @FindBy(xpath = "//*[text()='Doctors save']")
+    public WebElement doctorsSaveButton;
+
+    @FindBy(xpath = "//input[@id='search-table']")
+    public WebElement searchDoctorsTextbox;
 
 
 

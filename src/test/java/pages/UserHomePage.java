@@ -169,15 +169,15 @@ public class UserHomePage {
     public WebElement hataliMailGirisi; // Hatali mail girisi text
 
     @FindBy(xpath ="(//*[text()='Departments'])[2]" ) 
-    public WebElement greenDepartmentsLink; //Home>Body>yeşil departments linki
+    public WebElement greenDepartments1Link; //Home>Body>yeşil departments linki
   
-    @FindBy(xpath ="(//*[text()='Doctors'])[3]" ) 
+    @FindBy(xpath ="(//*[text()='Doctors'])[3]" )
     public WebElement greenDoctorsLink; //Home>Body>yeşil doctors linki
-  
-    @FindBy(xpath ="(//*[text()='Vaccinations'])[4]" ) 
+
+    @FindBy(xpath ="(//*[text()='Vaccinations'])[4]" )
     public WebElement greenVaccinationsLink;//Home>Body>yeşil vaccinations linki
-  
-    @FindBy(xpath = "(//img[@alt='LoyalFriendCare'])[2]") 
+
+    @FindBy(xpath = "(//img[@alt='LoyalFriendCare'])[2]")
     public WebElement loyalFriendCareHeaderLogo;
 
 }
