@@ -87,19 +87,20 @@ public class UserHomePage {
    public WebElement signUpKayitButton;
 
    @FindBy(xpath = "//*[text()='Wellness']")
-   public WebElement welnessImage;                                                //HomePage / Body / Departmens / Wellness
+   public WebElement welnessImage;         //HomePage / Body / Departmens / Wellness
 
    @FindBy(xpath = "//*[@alt='Vaccinations']")
-   public WebElement vaccinationsImage;                                            //HomePage  / Body / Departmesn / Vaccinations
+   public WebElement vaccinationsImage;   //HomePage  / Body / Departmesn / Vaccinations
 
    @FindBy(xpath = "//*[@alt='Dr. Alejandro Martinez']")
-   public WebElement drAlejandRoMartinesimage;                                     //HomePage / Body / Doctors / DrAlejandRo
+   public WebElement drAlejandRoMartinesimage;   //HomePage / Body / Doctors / DrAlejandRo
+
 
    @FindBy(xpath = "//*[@alt='Dr. Olivia Bennett']")
-   public WebElement drOliviaBennetImage;                                          //HomePage / Body / Doctors / DrOlivaBennet
+   public WebElement drOliviaBennetImage;    //HomePage / Body / Doctors / DrOlivaBennet
 
    @FindBy(xpath = "//*[@alt='Rabies Vaccine']")
-   public WebElement rabiesVaccinationsImage;                                       //HomePage / Body / VaccinationsForPets / RabbiesVaccinations
+   public WebElement rabiesVaccinationsImage;    //HomePage / Body / VaccinationsForPets / RabbiesVaccinations
 
    @FindBy(xpath = "//*[@alt='Bordetella (Kennel Cough) Vaccine']")
    public WebElement bordetellaImage;                                               //HomePage / Body / VaccinationsForPets / Bordetella
@@ -116,4 +117,18 @@ public class UserHomePage {
     @FindBy(xpath = "//a[normalize-space()='admin01']")
     public WebElement adminDashboardButton; //HomePage >> Header >> Admin Dashboard Button
 
+    @FindBy(xpath = "//*[text()='Dental Care']")
+    public WebElement dentalCareImage;                                                //HomePage / Body / Departmens / Dental care
+
+    @FindBy(xpath ="(//*[text()='Departments'])[2]" ) 
+    public WebElement greenDepartmentsLink; //Home>Body>yeşil departments linki
+  
+    @FindBy(xpath ="(//*[text()='Doctors'])[3]" ) 
+    public WebElement greenDoctorsLink; //Home>Body>yeşil doctors linki
+  
+    @FindBy(xpath ="(//*[text()='Vaccinations'])[4]" ) 
+    public WebElement greenVaccinationsLink;//Home>Body>yeşil vaccinations linki
+  
+    @FindBy(xpath = "(//img[@alt='LoyalFriendCare'])[2]") 
+    public WebElement loyalFriendCareHeaderLogo;
 }

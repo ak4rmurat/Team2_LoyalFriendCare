@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+import java.util.List;
+
 public class AdminDashboardPage {
 
     public AdminDashboardPage(){
@@ -76,11 +78,39 @@ public class AdminDashboardPage {
     @FindBy(xpath = "//a[normalize-space()='Create Bed managers']")
     public WebElement createBedManagersButton; // Admin Dashboard >> Bed Managers >> Create Bed Managers
 
+
     @FindBy(xpath = "//span[@class='title'][normalize-space()='Settings']")
     public WebElement adminDashboardSettingButton; // Admin Dashboard >> Setting
 
+    @FindBy(xpath = "//div[@class='card-title']")
+    public WebElement tableRolesText; // Admin Dasboard >> Roles >> Roles
 
+    @FindBy(xpath = "//div[@id='tableWithSearch_info']")
+    public WebElement numberOfRolesText; // Admin Dasboard >> Roles >> Roles
 
+    @FindBy(xpath = "//span[text()='Tickets']")
+    public WebElement ticketsButton;// Admin Dashboard >> tickets
+  
+    @FindBy(xpath = "//span[text()='Consultation']")
+    public WebElement consultationButton;//Admin Dashboard >> Consultation
+  
+    @FindBy(xpath = "//a[text()='Consultation']")
+    public WebElement consultationAltMenuButton;//Admin Dashboard >> Consultation>> Consultation
+  
+    @FindBy(xpath = "//div[@class='gallery-item']")
+    public List<WebElement> consultationAudioImagesList;//Admin Dashboard >> Consultation>> Consultation>>AudiosResimleri Listesi
+  
+    @FindBy(xpath = "//h5[text()='consultation']")
+    public WebElement consultationTitleH5;//Admin Dashboard >> Consultation>> Consultation>>consultation h5 baslik
+  
+    @FindBy(xpath = "//div[@class='cover-photo']")
+    public WebElement consultationBaslikImage;
+  
+    @FindBy(xpath = "//a[text()='LoyalFriendCare']")
+    public WebElement loyalFriendCareFooterLink;//Admin Dashboard >>Footer>LoyalFriendCare linki,anasayfaya donus
+  
+    @FindBy(xpath = "//a[@class='pull-left bold text-white fs-14 p-t-10']")
+    public List<WebElement> consultationAudioLinksList;//Admin Dashboard >> Consultation>> Consultation>>Audios linkleri Listesi
 
 
 
