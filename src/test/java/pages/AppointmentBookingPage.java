@@ -44,5 +44,11 @@ public class AppointmentBookingPage {
     public WebElement appointmentBookingText;//home>departments>herhangi dep>rezervazyon olusturulunca cikan yazi"Congratulations on your well-deserved success."
 
     @FindBy(xpath = "//div[@role='alert']")
-    public WebElement conformatiomMassage;
+    public WebElement conformationMassage;
+
+    @FindBy(xpath = "//*[@name='doctor_id']")
+    public WebElement doctorDropdown;
+
+    @FindBy(xpath = "//*[@placeholder='Create Message']")
+    public WebElement createTextBoxMessage;
 }

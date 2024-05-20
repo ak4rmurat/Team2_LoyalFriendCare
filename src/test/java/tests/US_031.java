@@ -10,12 +10,13 @@ import utilities.Driver;
 import utilities.ReusableMethods;
 
 public class US_031 {
-    UserHomePage userHomePage=new UserHomePage();
-    AdminDashboardPage adminDashboardPage=new AdminDashboardPage();
-    Actions actions=new Actions(Driver.getDriver());
+
 
     @Test
     public void TC_001(){
+        UserHomePage userHomePage=new UserHomePage();
+        AdminDashboardPage adminDashboardPage=new AdminDashboardPage();
+        Actions actions=new Actions(Driver.getDriver());
         // 1-Kullanıcı URL e gider
         Driver.getDriver().get(ConfigReader.getProperty("url"));
         Assert.assertTrue(userHomePage.loyalFriendCareLogo.isDisplayed());
@@ -60,6 +61,9 @@ public class US_031 {
     }
     @Test
     public void TC_002(){
+        UserHomePage userHomePage=new UserHomePage();
+        AdminDashboardPage adminDashboardPage=new AdminDashboardPage();
+        Actions actions=new Actions(Driver.getDriver());
         // 1-Kullanıcı URL e gider
         Driver.getDriver().get(ConfigReader.getProperty("url"));
         Assert.assertTrue(userHomePage.loyalFriendCareLogo.isDisplayed());

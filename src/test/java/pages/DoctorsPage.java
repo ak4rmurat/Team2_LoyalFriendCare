@@ -51,9 +51,6 @@ public class DoctorsPage {
     @FindBy(xpath="//*[@id='filters_col_bt']") 
     public WebElement doctorsListLabel; // Home>Doctors> Doctors Listesi
   
-    @FindBy(xpath = "//*[text()='Doctors of LoyalFriendCare']") 
-    public WebElement doctorsOfLoyalFriendCareText;//Home> Doctors> Doctors>Doctors Of Loyal Friend Care yazısı
-  
     @FindBy(xpath = "//*[@class='img-fluid']")
     public WebElement totalDoctorImage;//Home>Doctors>Sayfadaki toplam doktor sayısı
   

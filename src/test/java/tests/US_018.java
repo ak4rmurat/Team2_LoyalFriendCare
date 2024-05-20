@@ -60,7 +60,7 @@ public class US_018 {
         ReusableMethods.wait(5);
         appointmentBookingPage.appointmenbookingButon.click();
        // 10 - Ekranda hata mesajı alir.
-        Assert.assertFalse(appointmentBookingPage.conformatiomMassage.isDisplayed());
+        Assert.assertFalse(appointmentBookingPage.conformationMassage.isDisplayed());
 
         Driver.quitDriver();
     }
@@ -95,7 +95,7 @@ public class US_018 {
          ReusableMethods.wait(2);
          //10 - "Congratulations on your well-deserved success." mesajini goruntuler
          String expectedMessage = "Congratulations on your well-deserved success.";
-         String actualMessage = appointmentBookingPage.conformatiomMassage.getText();
+         String actualMessage = appointmentBookingPage.conformationMassage.getText();
          Assert.assertEquals(actualMessage,expectedMessage);
 
          Driver.quitDriver();
@@ -128,7 +128,7 @@ public class US_018 {
        // 9 - "Appointment Booking" e tiklar
         appointmentBookingPage.appointmenbookingButon.click();
        // 10 - Ekranda hata mesajı cikar
-        Assert.assertFalse(appointmentBookingPage.conformatiomMassage.isDisplayed());
+        Assert.assertFalse(appointmentBookingPage.conformationMassage.isDisplayed());
 
         Driver.quitDriver();
 

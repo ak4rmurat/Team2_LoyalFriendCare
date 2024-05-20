@@ -16,19 +16,20 @@ import utilities.ReusableMethods;
 public class US_014 {
 
 
-    UserHomePage userHomePage = new UserHomePage();
-    VaccinationsPage vaccinationsPage = new VaccinationsPage();
-    AppointmentBookingPage appointmentBookingPage = new AppointmentBookingPage();
-    Faker faker = new Faker();
-    Actions actions = new Actions(Driver.getDriver());
-    SoftAssert softAssert = new SoftAssert();
-    String name = faker.name().firstName();
-    String emailAdress = faker.internet().emailAddress();
-
 
 
     @Test
     public void TC_1401(){
+        UserHomePage userHomePage = new UserHomePage();
+        VaccinationsPage vaccinationsPage = new VaccinationsPage();
+        AppointmentBookingPage appointmentBookingPage = new AppointmentBookingPage();
+        Faker faker = new Faker();
+        Actions actions = new Actions(Driver.getDriver());
+        SoftAssert softAssert = new SoftAssert();
+        String name = faker.name().firstName();
+        String emailAdress = faker.internet().emailAddress();
+
+
 
         // 1 - Kayitli Kullanici hedef Url ile Anasayfaya gider.
 
@@ -92,12 +93,12 @@ public class US_014 {
 
         // 9 - Dropdown menuden doktor secimi yapilir
 
-        //appointmentBookingPage.doctorDropdown.click();
-        //actions.sendKeys(Keys.ARROW_DOWN).perform();
-        //actions.sendKeys(Keys.ARROW_DOWN).perform();
-        //actions.sendKeys(Keys.ARROW_DOWN).perform();
-        //actions.sendKeys(Keys.ARROW_DOWN).perform();
-        //ReusableMethods.wait(2);
+        appointmentBookingPage.doctorDropdown.click();
+        actions.sendKeys(Keys.ARROW_DOWN).perform();
+        actions.sendKeys(Keys.ARROW_DOWN).perform();
+        actions.sendKeys(Keys.ARROW_DOWN).perform();
+        actions.sendKeys(Keys.ARROW_DOWN).perform();
+        ReusableMethods.wait(2);
 
 
         // 10 - Mesaj yazilmak isteniyorsa mesaj bolumune yazilir.
@@ -113,12 +114,20 @@ public class US_014 {
         ReusableMethods.wait(2);
 
 
-        Driver.getDriver().quit();
+        Driver.quitDriver();
 
     }
 
     @Test
     public void TC_1402(){
+        UserHomePage userHomePage = new UserHomePage();
+        VaccinationsPage vaccinationsPage = new VaccinationsPage();
+        AppointmentBookingPage appointmentBookingPage = new AppointmentBookingPage();
+        Faker faker = new Faker();
+        Actions actions = new Actions(Driver.getDriver());
+        SoftAssert softAssert = new SoftAssert();
+        String name = faker.name().firstName();
+        String emailAdress = faker.internet().emailAddress();
 
         // 1 - Kayitli Kullanici hedef Url ile Anasayfaya gider.
 
@@ -191,11 +200,19 @@ public class US_014 {
         ReusableMethods.wait(2);
 
 
-        Driver.getDriver().quit();
+        Driver.quitDriver();
     }
 
     @Test
     public void TC_1403(){
+        UserHomePage userHomePage = new UserHomePage();
+        VaccinationsPage vaccinationsPage = new VaccinationsPage();
+        AppointmentBookingPage appointmentBookingPage = new AppointmentBookingPage();
+        Faker faker = new Faker();
+        Actions actions = new Actions(Driver.getDriver());
+        SoftAssert softAssert = new SoftAssert();
+        String name = faker.name().firstName();
+        String emailAdress = faker.internet().emailAddress();
 
         // 1 - Kayitli Kullanici hedef Url ile Anasayfaya gider.
 
@@ -270,7 +287,7 @@ public class US_014 {
         ReusableMethods.wait(2);
 
 
-        Driver.getDriver().quit();
+        Driver.quitDriver();
 
     }
 

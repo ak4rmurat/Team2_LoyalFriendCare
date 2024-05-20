@@ -9,12 +9,13 @@ import utilities.Driver;
 
 public class US_023 {
 
-    UserHomePage userhomepage = new UserHomePage();
-    AdminDashboardPage adminDashboardPage = new AdminDashboardPage();
 
 
     @Test
     public void TC_2301(){
+        UserHomePage userhomepage = new UserHomePage();
+        AdminDashboardPage adminDashboardPage = new AdminDashboardPage();
+
         //Kayitli kullanici ilgili Url ile anasayfaya gider.
         Driver.getDriver().get(ConfigReader.getProperty("url"));
 
@@ -45,6 +46,9 @@ public class US_023 {
     }
     @Test
     public void TC_2302(){
+        UserHomePage userhomepage = new UserHomePage();
+        AdminDashboardPage adminDashboardPage = new AdminDashboardPage();
+
         //Kayitli kullanici ilgili Url ile anasayfaya gider.
         Driver.getDriver().get(ConfigReader.getProperty("url"));
 

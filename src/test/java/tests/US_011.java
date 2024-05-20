@@ -18,18 +18,19 @@ import static utilities.Driver.driver;
 
 public class US_011 {
 
-    UserHomePage userHomePage = new UserHomePage();
-    DepartmentsPage departmentsPage=new DepartmentsPage();
-    Faker faker = new Faker();
-    String name = faker.name().firstName();
-    String emailAdress = faker.internet().emailAddress();
-    String password = "Team2.13555";
-    SoftAssert softAssert = new SoftAssert();
-    Actions actions=new Actions(Driver.getDriver());
-
 
     @Test
     public void TC_1101(){
+
+        UserHomePage userHomePage = new UserHomePage();
+        DepartmentsPage departmentsPage=new DepartmentsPage();
+        Faker faker = new Faker();
+        String name = faker.name().firstName();
+        String emailAdress = faker.internet().emailAddress();
+        String password = "Team2.13555";
+        SoftAssert softAssert = new SoftAssert();
+        Actions actions=new Actions(Driver.getDriver());
+
 
 
         // 1 - Kayitli Kullanici hedef Url ile Anasayfaya gider.
@@ -150,13 +151,23 @@ public class US_011 {
 
 
 
-        Driver.getDriver().quit();
+        Driver.quitDriver();
 
     }
 
 
     @Test
     public void TC_1102(){
+        UserHomePage userHomePage = new UserHomePage();
+        DepartmentsPage departmentsPage=new DepartmentsPage();
+        Faker faker = new Faker();
+        String name = faker.name().firstName();
+        String emailAdress = faker.internet().emailAddress();
+        String password = "Team2.13555";
+        SoftAssert softAssert = new SoftAssert();
+        Actions actions=new Actions(Driver.getDriver());
+
+
 
         // 1 - Kayitli Kullanici hedef Url ile Anasayfaya gider.
 
@@ -180,12 +191,22 @@ public class US_011 {
         // 4 - Sifrenin hatali girildigi mesajı goruntulenir.
 
 
-        Driver.getDriver().quit();
+        Driver.quitDriver();
 
     }
 
     @Test
     public void TC_1103(){
+        UserHomePage userHomePage = new UserHomePage();
+        DepartmentsPage departmentsPage=new DepartmentsPage();
+        Faker faker = new Faker();
+        String name = faker.name().firstName();
+        String emailAdress = faker.internet().emailAddress();
+        String password = "Team2.13555";
+        SoftAssert softAssert = new SoftAssert();
+        Actions actions=new Actions(Driver.getDriver());
+
+
 
         // 1 - Kayitli Kullanici hedef Url ile Anasayfaya gider.
 
@@ -214,7 +235,7 @@ public class US_011 {
 
 
 
-        Driver.getDriver().quit();
+        Driver.quitDriver();
 
     }
 }

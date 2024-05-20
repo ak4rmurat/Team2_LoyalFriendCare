@@ -11,17 +11,15 @@ import utilities.Driver;
 public class US_005 {
 
 
-   SoftAssert softAssert=new SoftAssert();
-   UserHomePage userHomePage=new UserHomePage();
-   Faker faker = new Faker();
-    String name = faker.name().firstName();
-    String emailAdress = faker.internet().emailAddress();
-    String password = "Team2.Damra";
-
-
-
     @Test
     public void TC0501(){
+
+        SoftAssert softAssert=new SoftAssert();
+        UserHomePage userHomePage=new UserHomePage();
+        Faker faker = new Faker();
+        String name = faker.name().firstName();
+        String emailAdress = faker.internet().emailAddress();
+        String password = "Team2.Damra";
 
 
         Driver.getDriver().get(ConfigReader.getProperty("url"));
@@ -43,6 +41,13 @@ public class US_005 {
 
     @Test
     public void TC0502(){
+        SoftAssert softAssert=new SoftAssert();
+        UserHomePage userHomePage=new UserHomePage();
+        Faker faker = new Faker();
+        String name = faker.name().firstName();
+        String emailAdress = faker.internet().emailAddress();
+        String password = "Team2.Damra";
+
 
         Driver.getDriver().get(ConfigReader.getProperty("url"));
 
@@ -72,7 +77,7 @@ public class US_005 {
 
 
 
-         Driver.closeDriver();
+         Driver.quitDriver();
 
     }
 }

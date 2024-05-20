@@ -16,14 +16,14 @@ import java.util.ResourceBundle;
 
 public class US_030 {
 
-    SoftAssert softAssert=new SoftAssert();
-    UserHomePage userHomePage=new UserHomePage();
-    AdminDashboardPage adminDashboardPage=new AdminDashboardPage();
-    Actions actions=new Actions(Driver.getDriver());
-
 
     @Test
     public void TC3001(){
+        SoftAssert softAssert=new SoftAssert();
+        UserHomePage userHomePage=new UserHomePage();
+        AdminDashboardPage adminDashboardPage=new AdminDashboardPage();
+        Actions actions=new Actions(Driver.getDriver());
+
 
         //Kullanıcı hedef Url Gider.
         Driver.getDriver().get(ConfigReader.getProperty("url"));
@@ -73,6 +73,11 @@ public class US_030 {
     }
     @Test
     public void TC3002(){
+        SoftAssert softAssert=new SoftAssert();
+        UserHomePage userHomePage=new UserHomePage();
+        AdminDashboardPage adminDashboardPage=new AdminDashboardPage();
+        Actions actions=new Actions(Driver.getDriver());
+
 
         //Kullanıcı hedef Url Gider.
         Driver.getDriver().get(ConfigReader.getProperty("url"));
@@ -130,6 +135,11 @@ public class US_030 {
 
     @Test
     public void TC3003(){
+        SoftAssert softAssert=new SoftAssert();
+        UserHomePage userHomePage=new UserHomePage();
+        AdminDashboardPage adminDashboardPage=new AdminDashboardPage();
+        Actions actions=new Actions(Driver.getDriver());
+
 
         //Kullanıcı hedef Url Gider.
         Driver.getDriver().get(ConfigReader.getProperty("url"));
@@ -221,7 +231,7 @@ public class US_030 {
 
         ReusableMethods.wait(2);
 
-        Driver.closeDriver();
+        Driver.quitDriver();
 
 
 

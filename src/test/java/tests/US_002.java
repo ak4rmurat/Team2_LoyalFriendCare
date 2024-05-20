@@ -10,13 +10,10 @@ import utilities.Driver;
 public class US_002 {
 
 
-    UserHomePage userHomePage = new UserHomePage();
-    DepartmentsPage departmentsPage = new DepartmentsPage();
-
-
-
     @Test
     public void TC_201() {
+        UserHomePage userHomePage = new UserHomePage();
+        DepartmentsPage departmentsPage = new DepartmentsPage();
         // 1 - Ziyaretci ilgili Url ile anasayfaya gider.
         Driver.getDriver().get(ConfigReader.getProperty("url"));
 
@@ -42,7 +39,7 @@ public class US_002 {
         Assert.assertTrue(departmentsPage.departmentsOfLFCText.isDisplayed());
         Assert.assertTrue(departmentsPage.departmentsWellnessButton.isEnabled());
 
-        Driver.driver.quit();
+        Driver.quitDriver();
 
 
 
