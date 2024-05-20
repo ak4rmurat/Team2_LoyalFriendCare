@@ -14,7 +14,6 @@ public class UserHomePage {
     @FindBy(xpath = "//nav[@id='menu']//a[normalize-space()='Doctors']")
      public WebElement doctorsDropDown; //HomePage>>Header>>DoctorsDropDown
 
-
     @FindBy(xpath = "//div[@class='col-lg-3 col-md-6 col-sm-6']//img[@alt='LoyalFriendCare']")
     public WebElement loyalFriendCareLogo; // Homepage/footer
 
@@ -143,10 +142,13 @@ public class UserHomePage {
     public WebElement signOutButton; // Homepage header / Sign Out Button
 
     @FindBy(xpath = "//button[@type='submit']")
-    public WebElement sendPasswordResetLink; //HomePage>>Header>>SignInButton>>Forgot Password
+    public WebElement sendPasswordResetLink; //HomePage >> Header >> SignInButton >> Forgot Password
 
     @FindBy(xpath = "//div[@role='alert']")
-    public WebElement resetPasswordSuccess; //HomePage>>Header>>SignInButton>>Forgot Password
+    public WebElement resetPasswordSuccess; //HomePage >> Header >> SignInButton >> Forgot Password
+
+    @FindBy(xpath = "//a[normalize-space()='admin01']")
+    public WebElement adminDashboardButton; //HomePage >> Header >> Admin Dashboard Button
 
     @FindBy(xpath = "//*[text()='Dental Care']")
     public WebElement dentalCareImage;  //HomePage / Body / Departmens / Dental care
@@ -166,19 +168,16 @@ public class UserHomePage {
     @FindBy(xpath = "//span[@class='invalid-feedback']")
     public WebElement hataliMailGirisi; // Hatali mail girisi text
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    @FindBy(xpath ="(//*[text()='Departments'])[2]" ) 
+    public WebElement greenDepartmentsLink; //Home>Body>yeşil departments linki
+  
+    @FindBy(xpath ="(//*[text()='Doctors'])[3]" ) 
+    public WebElement greenDoctorsLink; //Home>Body>yeşil doctors linki
+  
+    @FindBy(xpath ="(//*[text()='Vaccinations'])[4]" ) 
+    public WebElement greenVaccinationsLink;//Home>Body>yeşil vaccinations linki
+  
+    @FindBy(xpath = "(//img[@alt='LoyalFriendCare'])[2]") 
+    public WebElement loyalFriendCareHeaderLogo;
 
 }
