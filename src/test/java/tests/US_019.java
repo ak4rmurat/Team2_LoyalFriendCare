@@ -53,6 +53,7 @@ public class US_019 {
         vaccinationsPage.vaccinationsimage.isDisplayed();
 
 
+
     }
     @Test
             public void TC1902(){
@@ -92,7 +93,9 @@ public class US_019 {
 
 
 
-        vaccinationsPage.rabbiesVaccineImage.click();
+        vaccinationsPage.rabbiesVaccineImage.click();   
+
+
 
         AppointmentBookingPage appointmentBookingPage=new AppointmentBookingPage();
 

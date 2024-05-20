@@ -42,8 +42,9 @@ public class VaccinationsPage {
 @FindBy(xpath = "//*[text()='Vaccinations of LoyalFriendCare']")
 public WebElement vaccinationsimage;          // Goruntulenen Vaccinations  sayfa'nın sol tarafında bulunan Ası secenekleri goruntulenir.
 
-
-
+    @FindBy(xpath = "//h1[text()=' Rabies Vaccine']") public WebElement rabbiesVaccineText;//  Home > VacciantionsPage> Rabies Vaccine baslık text
+    @FindBy(xpath = "//h1[text()=' Bordetella (Kennel Cough) Vaccine']") public WebElement  bordetellaVaccineText;// Home > VacciantionsPage> Bordetella (Kennel Cough) Vaccine baslık text
+    @FindBy(xpath = "//h1[text()='Vaccinations']")public WebElement  vaccinationsH1Title;//Home > VacciantionsPage>yeşil alan h1 başlık
 
 
 }

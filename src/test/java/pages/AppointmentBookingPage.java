@@ -19,19 +19,27 @@ public class AppointmentBookingPage {
     public WebElement phoneNumberTextBox;         //rezervasyon cep telefonu
 
     @FindBy(xpath = "//*[@class='nice-select wide'][1]")
-    public WebElement welnessDropdown;
-
-
-    @FindBy(xpath = "//*[@name='doctor_id']")
-    public WebElement doctorDropdown;
-
-    @FindBy(xpath = "//*[@placeholder='Create Message']")
-    public WebElement createTextBoxMessage;
+    public WebElement welnessDropdown; //HomePage>>Doctors>>WellnessDropdown
 
     @FindBy(xpath = "//*[@value='Appointment Booking']")
-    public WebElement appointmenbookingButon;
+    public WebElement appointmenbookingButon; //HomePage>>Doctors>>Appointment Booking Button
 
     @FindBy(xpath = "//*[@data-value='57']")
-    public WebElement wellnessDropdownMenuDentalCare;
+    public WebElement wellnessDropdownMenuDentalCare; //HomePage>>Doctors>>Wellness Dropdown Menu DentalCare
+
+    @FindBy(xpath = "//h5[@class='d-inline']")
+    public WebElement appointmenBookingText; //HomePage>>Doctors>>Appointment Booking Text
+
+    @FindBy(xpath = "//li[contains(text(),'Dr. Isabella Wong')]")
+    public WebElement drDropdownMenuDrIsabella; //HomePage>>Doctors>> Dr Dropdown Menu Dr.Isabella
+
+    @FindBy(xpath = "//div[normalize-space()='Congratulations on your well-deserved success.']")
+    public WebElement appointmenBookingTextSuccessText; //HomePage>>Doctors>> Appointment Booking Text Success Text
+
+    @FindBy(xpath = "//li[contains(text(),'Dermatology')]")
+    public WebElement appointmentBookingDepartmanDropDown; //HomePage>>Doctors>> Appointment Booking Departman DropDown
+
+
+    @FindBy(xpath = "//div[@role='alert']")public WebElement appointmentBookingText;//home>departments>herhangi dep>rezervazyon olusturulunca cikan yazi"Congratulations on your well-deserved success."
 
 }
