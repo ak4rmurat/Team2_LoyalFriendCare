@@ -95,6 +95,7 @@ public class UserHomePage {
    @FindBy(xpath = "//*[@alt='Dr. Alejandro Martinez']")
    public WebElement drAlejandRoMartinesimage;   //HomePage / Body / Doctors / DrAlejandRo
 
+
    @FindBy(xpath = "//*[@alt='Dr. Olivia Bennett']")
    public WebElement drOliviaBennetImage;    //HomePage / Body / Doctors / DrOlivaBennet
 
@@ -113,4 +114,18 @@ public class UserHomePage {
     @FindBy(xpath = "//div[@role='alert']")
     public WebElement resetPasswordSuccess; //HomePage>>Header>>SignInButton>>Forgot Password
 
+    @FindBy(xpath = "//*[text()='Dental Care']")
+    public WebElement dentalCareImage;                                                //HomePage / Body / Departmens / Dental care
+
+    @FindBy(xpath ="(//*[text()='Departments'])[2]" ) 
+    public WebElement greenDepartmentsLink; //Home>Body>yeşil departments linki
+  
+    @FindBy(xpath ="(//*[text()='Doctors'])[3]" ) 
+    public WebElement greenDoctorsLink; //Home>Body>yeşil doctors linki
+  
+    @FindBy(xpath ="(//*[text()='Vaccinations'])[4]" ) 
+    public WebElement greenVaccinationsLink;//Home>Body>yeşil vaccinations linki
+  
+    @FindBy(xpath = "(//img[@alt='LoyalFriendCare'])[2]") 
+    public WebElement loyalFriendCareHeaderLogo;
 }
