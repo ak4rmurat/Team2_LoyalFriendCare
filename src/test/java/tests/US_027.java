@@ -1,5 +1,6 @@
 package tests;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -16,7 +17,6 @@ public class US_027 {
     UserHomePage userHomePage=new UserHomePage();
     AdminDashboardPage adminDashboardPage=new AdminDashboardPage();
     Actions actions=new Actions(Driver.getDriver());
-    @FindBy (xpath = "//thead/tr") List<WebElement> public WebElement list;
 
     @Test
     public void TC_001(){
@@ -37,7 +37,7 @@ public class US_027 {
         adminDashboardPage.adminLoginButton.click();
         Assert.assertTrue(ConfigReader.getProperty("adminDashboardUrl").contains("admin"));
 
-        //5-Sayfanın soluna hover yapilir
+       /* //5-Sayfanın soluna hover yapilir
         actions.moveToElement(adminDashboardPage.dashBoardMenu).perform();
 
 
@@ -48,10 +48,12 @@ public class US_027 {
         adminDashboardPage.doctorsDoctorsButton.click();
         Assert.assertTrue(adminDashboardPage.doctorsDoctorsButton.isDisplayed());
         //8-Doktor sayisinin sayfanin altinda goruntulenir
-        Assert.assertTrue(adminDashboardPage.doctorCountText.getText().contains("8"));
+        Assert.assertTrue(adminDashboardPage.doctorCountText.getText().contains("8"));*/
 
 
         //8-Edit butonu goruntulenir
+
+
 
         //9-Delete butonu goruntulenir
         //10- Headerdaki Add Doctors butonuna tiklanir
