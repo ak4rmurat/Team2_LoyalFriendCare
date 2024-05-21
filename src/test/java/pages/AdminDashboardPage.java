@@ -69,6 +69,8 @@ public class AdminDashboardPage {
     @FindBy(xpath = "//a[normalize-space()='Create User']")
     public WebElement createUsersButton; // Admin Dashboard >> Users >> Create Users
 
+
+    // Admin Dashboard Bed Managers Menusu
     @FindBy(xpath = "//span[@class='title'][normalize-space()='Bed managers']")
     public WebElement bedManagersButton; // Admin Dashboard >> Bed Managers
 
@@ -78,27 +80,51 @@ public class AdminDashboardPage {
     @FindBy(xpath = "//a[normalize-space()='Create Bed managers']")
     public WebElement createBedManagersButton; // Admin Dashboard >> Bed Managers >> Create Bed Managers
 
+    @FindBy(xpath = "//*[@class='btn btn-tag btn-success btn-tag-rounded']")
+    public WebElement addBedManagersButton;  // Admin Dashboard >> Bed Managers >> Add Bed Managers Button
+
+    @FindBy(xpath = "//*[@id=\"Title_en\"]")
+    public WebElement bedManagersTitleButton;  // Admin Dashboard >> Bed Managers >> Bed Managers Title Button
+
+    @FindBy(xpath = "(//*[@class=\"select2-selection__rendered\"])[1]")
+    public WebElement bedManagersDropdownMenu;  // Admin Dashboard >> Bed Managers >> Bed Managers Dropdown Menu
+
+    @FindBy(xpath = "//*[@class=\"select2-results__option select2-results__option--highlighted\"]")
+    public WebElement bedManagersDermatology; // Admin Dashboard >> Bed Managers >> Bed Managers >> Dermatology
+
+    @FindBy(xpath = "(//*[@class=\"select2-selection__rendered\"])[2]")
+    public WebElement createdDoctorDropdownMenu; // Admin Dashboard >> Bed Managers >> Created Doctors Dropdown Menu
+
+    @FindBy(xpath = "//*[@class=\"select2-results__option select2-results__option--highlighted\"]")
+    public WebElement drOliviaBennet;  // Admin Dashboard >> Bed Managers >> Created Doctors >> Dr Olivia Bennet
+
+    @FindBy(xpath = "(//*[@class=\"select2-selection__rendered\"])[3]")
+    public WebElement createdMedicinesDropdownMenu; // Admin Dashboard >> Bed Managers >> Created Medicines Dropdown Menu
+
+    @FindBy(xpath = "(//*[@class='form-control'])[5]")
+    public WebElement bedManagersPriceDropdownMenu; // Admin Dashboard >> Bed Managers >> Bed Managers Price Dropdown Menu
+
+    @FindBy(xpath = "//*[@type='submit']")
+    public WebElement bedManagersSaveButton;  // Admin Dashboard >> Bed Managers >> Bed Managers Save Button
+
+    @FindBy(xpath = "//*[@id=\"tableWithSearch\"]/tbody/tr[1]/td[5]/a/span")
+    public WebElement bedManagersEditButton; // Admin Dashboard >> Bed Managers >> Bed Managers Edit Button
+
+    @FindBy(xpath = "//*[@id=\"tableWithSearch\"]/tbody/tr[1]/td[6]/form")
+    public WebElement bedManagersDeleteButton; // Admin Dashboard >> Bed Managers >> Bed Managers Delete Button
+
     @FindBy(xpath = "//span[@class='title'][normalize-space()='Settings']")
     public WebElement settingsButton; // Admin Dashboard Menu >> Settings
 
+    @FindBy(xpath = "(//*[@class=\"text-white no-margin\"])[1]")
+    public WebElement welcomeSettingsText; // Admin Dashboard Menu >> Settings  >> Welcome Text
+
+
+
+
+
     @FindBy(xpath = "//div[5]//div[1]//div[2]//div[1]//div[1]//div[1]//h3[1]//span[1]")
     public WebElement youtubeSettingsInfo;  // Admin Dashboard Menu >> Settings >> youtube bilgisi
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     @FindBy(xpath = "//span[@class='title'][normalize-space()='Settings']")
@@ -159,6 +185,23 @@ public class AdminDashboardPage {
 
    @FindBy(xpath = "//*[@role='treeitem'][2]")
     public WebElement createPetsImage;
+
+
+   // Admin Resim
+   @FindBy(xpath = "//*[@class=\"thumbnail-wrapper d32 border-5  inline\"]")
+    public WebElement adminResim; // Admin Resim Dropdown
+
+    @FindBy(xpath = "(//*[@class=\"dropdown-item\"])[1]")
+    public WebElement adminSettings;    // Admin Resim Dropdown >> Settings
+
+    @FindBy(xpath = "(//*[@class=\"dropdown-item\"])[2]")
+    public WebElement adminEditProfile;    // Admin Resim Dropdown >> Edit Profile
+
+    @FindBy(xpath = "//*[@class=\"clearfix bg-master-lighter dropdown-item\"]")
+    public WebElement adminLogout;    // Admin Resim Dropdown >> Logout
+
+    @FindBy(xpath = "//*[@class=\"fa fa-user\"]")
+    public WebElement editProfilePage;  // Admin Resim Dropdown >> Edit Profile
 
 
 

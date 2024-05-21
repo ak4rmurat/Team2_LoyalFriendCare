@@ -121,7 +121,7 @@ public class US_011 {
         Assert.assertTrue(userHomePage.twitterLogo.isDisplayed());
         userHomePage.twitterLogo.click();
         ReusableMethods.wait(2);
-        Driver.getDriver().navigate().back();
+        Driver.getDriver().get(ConfigReader.getProperty("url"));
 
 
         Assert.assertTrue(userHomePage.youtubeLogo.isDisplayed());
