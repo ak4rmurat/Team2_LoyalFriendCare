@@ -54,7 +54,7 @@ public class US_014 {
         //     "Vaccinations" bolumu bulunur, tiklanir ve ilgili sayfaya gidilir.
 
         Assert.assertTrue(userHomePage.loyalFriendCareHeaderLogo.isEnabled());
-        actions.sendKeys(Keys.PAGE_DOWN).perform();
+        //actions.sendKeys(Keys.PAGE_DOWN).perform();
         userHomePage.vaccinationsImage.click();
         ReusableMethods.wait(2);
 
@@ -70,40 +70,15 @@ public class US_014 {
 
 
         // 6 - Date ogesinden asi icin istenen gun girilir veya takvimden secilir
-
-        appointmentBookingPage.dateTextBox.sendKeys("28.05.2024");
-
-
         // 7 - Telefon Numarasi girilir
-
-        appointmentBookingPage.phoneNumberTextBox.sendKeys("5425424242");
-
-
         // 8 - Asinin hangi bolumle ilgili yapilacagi dropdown menuden secilir
-
-        appointmentBookingPage.welnessDropdown.click();
-        actions.sendKeys(Keys.ARROW_DOWN).perform();
-        actions.sendKeys(Keys.ARROW_DOWN).perform();
-        actions.sendKeys(Keys.ARROW_DOWN).perform();
-        actions.sendKeys(Keys.ARROW_DOWN).perform();
-        actions.sendKeys(Keys.ARROW_DOWN).perform();
-        actions.sendKeys(Keys.ENTER).perform();
-        ReusableMethods.wait(3);
-
-
         // 9 - Dropdown menuden doktor secimi yapilir
-
-        appointmentBookingPage.doctorDropdown.click();
-        actions.sendKeys(Keys.ARROW_DOWN).perform();
-        actions.sendKeys(Keys.ARROW_DOWN).perform();
-        actions.sendKeys(Keys.ARROW_DOWN).perform();
-        actions.sendKeys(Keys.ARROW_DOWN).perform();
-        ReusableMethods.wait(2);
-
-
         // 10 - Mesaj yazilmak isteniyorsa mesaj bolumune yazilir.
 
-        appointmentBookingPage.createTextBoxMessage.sendKeys("Merhabalar.");
+        appointmentBookingPage.dateTextBox.sendKeys("28.05.2024"+ Keys.TAB + "5425424242" + Keys.TAB+
+                Keys.ARROW_DOWN + Keys.ARROW_DOWN+ Keys.ARROW_DOWN+ Keys.ARROW_DOWN+Keys.ENTER +Keys.TAB+
+                Keys.ARROW_DOWN + Keys.ARROW_DOWN+ Keys.ARROW_DOWN+ Keys.ENTER +Keys.TAB+"Mesaj bulunmakta");
+
 
 
         // 11 - Appointment Booking butonuna tiklanir ve
@@ -158,38 +133,14 @@ public class US_014 {
 
 
         // 5 - Date ogesinden asi icin gecmis tarihli gun girilir veya takvimden secilir
-
-        appointmentBookingPage.dateTextBox.sendKeys("28.05.2023");
-
-
         // 6 - Telefon Numarasi girilir
-
-        appointmentBookingPage.phoneNumberTextBox.sendKeys("5425424242");
-
-
         // 7 - Asinin hangi bolumle ilgili yapilacagi dropdown menuden secilir
-
-        appointmentBookingPage.welnessDropdown.click();
-        actions.sendKeys(Keys.ARROW_DOWN).perform();
-        actions.sendKeys(Keys.ARROW_DOWN).perform();
-        actions.sendKeys(Keys.ARROW_DOWN).perform();
-        actions.sendKeys(Keys.ARROW_DOWN).perform();
-        actions.sendKeys(Keys.ENTER).perform();
-
-
         // 8 - Dropdown menuden doktor secimi yapilir
-
-        //appointmentBookingPage.doctorDropdown.click();
-        //actions.sendKeys(Keys.ARROW_DOWN).perform();
-        //actions.sendKeys(Keys.ARROW_DOWN).perform();
-        //actions.sendKeys(Keys.ARROW_DOWN).perform();
-        //actions.sendKeys(Keys.ARROW_DOWN).perform();
-        //ReusableMethods.wait(2);
-
-
         // 9 - Mesaj yazilmak isteniyorsa mesaj bolumune yazilir.
 
-        appointmentBookingPage.createTextBoxMessage.sendKeys("Merhabalar.");
+        appointmentBookingPage.dateTextBox.sendKeys("28.05.2023"+ Keys.TAB + "5425424242" + Keys.TAB+
+                Keys.ARROW_DOWN + Keys.ARROW_DOWN+ Keys.ARROW_DOWN+ Keys.ARROW_DOWN+Keys.ENTER +Keys.TAB+
+                Keys.ARROW_DOWN + Keys.ARROW_DOWN+ Keys.ARROW_DOWN+ Keys.ENTER +Keys.TAB+"Mesaj bulunmakta");
 
 
         // 10 - Appointment Booking butonuna tiklanir ve
@@ -238,45 +189,19 @@ public class US_014 {
 
         Assert.assertTrue(userHomePage.loyalFriendCareHeaderLogo.isEnabled());
         actions.sendKeys(Keys.PAGE_DOWN).perform();
+        ReusableMethods.wait(1);
         userHomePage.vaccinationsImage.click();
         ReusableMethods.wait(2);
 
-
-        // 5 - Date ogesinden asi icin istenen gun girilir veya takvimden secilir
-
-        appointmentBookingPage.dateTextBox.sendKeys("28.05.2024");
-
-
-        // 6 - Telefon Numarasi yanlis girilir
-
-        appointmentBookingPage.phoneNumberTextBox.sendKeys("123Abcde12.");
-
-
+        // 5 - Date ogesinden asi icin gecmis tarihli gun girilir veya takvimden secilir
+        // 6 - Telefon Numarasi girilir
         // 7 - Asinin hangi bolumle ilgili yapilacagi dropdown menuden secilir
-
-        appointmentBookingPage.welnessDropdown.click();
-        actions.sendKeys(Keys.ARROW_DOWN).perform();
-        actions.sendKeys(Keys.ARROW_DOWN).perform();
-        actions.sendKeys(Keys.ARROW_DOWN).perform();
-        actions.sendKeys(Keys.ARROW_DOWN).perform();
-        actions.sendKeys(Keys.ENTER).perform();
-
-
         // 8 - Dropdown menuden doktor secimi yapilir
-
-        // actions.sendKeys(Keys.TAB).click().sendKeys().click().sendKeys(Keys.TAB).sendKeys("Thank You").perform();
-
-        //appointmentBookingPage.doctorDropdown.click();
-        //actions.sendKeys(Keys.ARROW_DOWN).perform();
-        //actions.sendKeys(Keys.ARROW_DOWN).perform();
-        //actions.sendKeys(Keys.ARROW_DOWN).perform();
-        //actions.sendKeys(Keys.ARROW_DOWN).perform();
-        //ReusableMethods.wait(2);
-
-
         // 9 - Mesaj yazilmak isteniyorsa mesaj bolumune yazilir.
 
-        appointmentBookingPage.createTextBoxMessage.sendKeys("Merhabalar.");
+        appointmentBookingPage.dateTextBox.sendKeys("28.05.2024"+ Keys.TAB + "123Abcde12." + Keys.TAB+
+                Keys.ARROW_DOWN + Keys.ARROW_DOWN+ Keys.ARROW_DOWN+ Keys.ARROW_DOWN+Keys.ENTER +Keys.TAB+
+                Keys.ARROW_DOWN + Keys.ARROW_DOWN+ Keys.ARROW_DOWN+ Keys.ENTER +Keys.TAB+"Mesaj bulunmakta");
 
 
         // 10 - Appointment Booking butonuna tiklanir ve
