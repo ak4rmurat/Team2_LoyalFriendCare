@@ -60,6 +60,44 @@ public class DepartmentsPage {
     @FindBy (xpath = "//label[@class='container_check']//a[normalize-space()='Wellness']")
     public WebElement departmentsWellnessButton; // Homepage>> Departments Button / Wellness Button
 
+    @FindBy(xpath = "//*[text()='Beds Departments']")
+    public WebElement bedsDepartmentsText;  // Homepage>> Departments Button / Wellness Button/Beds Departments text
+
+    @FindBy(xpath = "//img[@alt='Wellness Room']")
+    public WebElement wellnesRoomImage; // Homepage>> Departments Button / Wellness Button/Wellness Room image
+
+    @FindBy(xpath = "(//h1[text()='Wellness Room'])[2]")
+    public WebElement wellnessRoomText; // Homepage>> Departments Button / Wellness Button/Wellness Room image / Wellness Room Text
+
+    @FindBy(xpath = "//a[text()= 'Boarding']")
+    public WebElement boardingText; // Homepage >> Departments Button / Boarding Text Link/
+
+    @FindBy(xpath = "//img[@alt='Boarding Room']")
+    public WebElement boardingRoomImage; // Homepage>> Departments Button / Boarding Text Link/ Boarding Room Image
+
+    @FindBy(xpath = "//a[text()= 'Pain Control']")
+    public WebElement painControlText; // Homepage >> Departments Button / Pain Control Text Link/
+
+    @FindBy(xpath = "//img[@alt='Pain Control']")
+    public WebElement painControlImage; // Homepage>> Departments Button / Pain Control Text Link/ Pain Control Image
+
+    @FindBy(xpath = "(//li[*=''])[1]")
+    public WebElement yatakliOdaSorumluDoktorYazisi;  // Homepage>> Departments Button / Wellness Button/Wellness Room image /
+                                                        // Wellness Room Text/  yataklı oda sorumlu doktor yazısı
+
+    @FindBy(xpath = "(//li[*=''])[2]")
+    public WebElement yatakliOdaIlgiliDepartmanYazisi;  // Homepage>> Departments Button / Wellness Button/Wellness Room image /
+                                                        // Wellness Room Text/  yataklı oda ilgili departman yazısı
+
+    @FindBy(xpath = "(//li[*=''])[3]")
+    public WebElement yatakliOdaIlgiliIlacYazisi;  // Homepage>> Departments Button / Wellness Button/Wellness Room image /
+                                                         // Wellness Room Text/  yataklı oda ilgili ilac  yazısı
+
+    @FindBy(xpath = "(//li[*=''])[4]")
+    public WebElement yatakliOdaUcretBilgiYazisi;  // Homepage>> Departments Button / Wellness Button/Wellness Room image /
+                                                            // Wellness Room Text/  yataklı oda ücrte bilgi yazısı
+
+
 
 
 

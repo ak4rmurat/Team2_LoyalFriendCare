@@ -160,6 +160,7 @@ public class AdminDashboardPage {
    @FindBy(xpath = "//*[@role='treeitem'][2]")
     public WebElement createPetsImage;
 
+
    @FindBy(xpath = "(//*[@class='btn btn-primary btn-sm  btn-rounded m-r-10'])[1]")
     public WebElement createPetsImageEkle;
 
@@ -170,7 +171,39 @@ public class AdminDashboardPage {
     public WebElement createPetsSaveButton;
 
 
+   @FindBy(xpath = "//a[contains(@class,'btn btn-tag btn-success btn-tag-rounded')]")
+    public WebElement departmentsAddDepartmentsButton; //Admin Dashboard >> Admin Dashboard Menu >> Departments >> Departments
 
+
+    @FindBy(xpath = "//a[normalize-space()='Create Departments']")
+    public WebElement departmentCreateDepartments; //Admin Dashboard >> Admin Dashboard Menu >> Departments >> Create Departments
+
+    @FindBy(xpath = "//h3[normalize-space()='New Departments']")
+    public WebElement newCreateDepartmentsText;
+
+    @FindBy(xpath = "//div[@id='tableWithSearch_info']")
+    public WebElement departmentsAdetText;
+
+
+
+   @FindBy(xpath = "//img[@src='https://qa.loyalfriendcare.com/images/6628e613c44309475.jpg']")
+    public WebElement adminKullaniciResmi;
+
+   @FindBy(xpath = "//span[text()='Logout']")
+    public WebElement adminLogoutButonu;
+
+
+    @FindBy(xpath = "//div[@id='tableWithSearch_info']")
+    public WebElement doctorCountText;
+
+    @FindBy(xpath = "//a[text()='Add Doctors']")
+    public  WebElement addDoctorsButton;
+
+    @FindBy(xpath = "//*[text()='Doctors save']")
+    public WebElement doctorsSaveButton;
+
+    @FindBy(xpath = "//input[@id='search-table']")
+    public WebElement searchDoctorsTextbox;
 
 
 
