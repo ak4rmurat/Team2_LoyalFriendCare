@@ -160,8 +160,20 @@ public class AdminDashboardPage {
    @FindBy(xpath = "//*[@role='treeitem'][2]")
     public WebElement createPetsImage;
 
+
+   @FindBy(xpath = "(//*[@class='btn btn-primary btn-sm  btn-rounded m-r-10'])[1]")
+    public WebElement createPetsImageEkle;
+
+   @FindBy(xpath = "(//*[@class='form-control '])[3]")
+    public WebElement createPetsImageDowloand;
+
+   @FindBy(xpath = "//*[text()='save']")
+    public WebElement createPetsSaveButton;
+
+
    @FindBy(xpath = "//a[contains(@class,'btn btn-tag btn-success btn-tag-rounded')]")
     public WebElement departmentsAddDepartmentsButton; //Admin Dashboard >> Admin Dashboard Menu >> Departments >> Departments
+
 
     @FindBy(xpath = "//a[normalize-space()='Create Departments']")
     public WebElement departmentCreateDepartments; //Admin Dashboard >> Admin Dashboard Menu >> Departments >> Create Departments
