@@ -79,18 +79,31 @@ public class US_028 {
         userHomePage.adminDashboardButton.click();
 
         //Dashboarda'a gelir ve "Departments" 'e tiklar.
-        actions.moveToElement(adminDashboardPage.departmentsButton).perform();
-        adminDashboardPage.departmentsDepartmentsButton.click();
-        ReusableMethods.wait(2);
+        actions.moveToElement(adminDashboardPage.admindasboard).perform();
+        adminDashboardPage.departmentsButton.click();
 
         //Acilan alttakidaki menude "Departments" 'e tiklar ve sayfaya gittigi test edilir.
-
+        adminDashboardPage.departmentsDepartmentsButton.click();
+        Assert.assertTrue(adminDashboardPage.departmentsAddDepartmentsButton.isEnabled());
 
         //Sonra dashboarda gelir ve "Departments" 'e tiklar acilan altindaki menude "Create Departsmens" tiklar ve sayfaya gittigi test edilir.
+        actions.moveToElement(adminDashboardPage.admindasboard).perform();
+        adminDashboardPage.departmentsButton.click();
+        adminDashboardPage.departmentCreateDepartments.click();
+        adminDashboardPage.newCreateDepartmentsText.isDisplayed();
 
         //Dashboarda'a gelir ve "Departments" 'e tiklar acilan alttakidaki menude "Departsmens" 'e tiklar.
+        actions.moveToElement(adminDashboardPage.admindasboard).perform();
+        adminDashboardPage.departmentsButton.click();
+        adminDashboardPage.departmentsDepartmentsButton.click();
 
         //Acilan sayfadaki deparments sayisini ve departmanlari goruntuler.
+        String expectedDepartmentsAdetText = "Showing 1 to 8 of 8 entries";
+        String actualDepartmentsAdetText = adminDashboardPage.departmentsAdetText.getText();
+        Assert.assertEquals(actualDepartmentsAdetText,expectedDepartmentsAdetText);
+
+
+
     }
 
     @Test
