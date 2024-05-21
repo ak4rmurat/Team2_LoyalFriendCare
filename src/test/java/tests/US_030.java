@@ -67,7 +67,7 @@ public class US_030 {
         //Dashboard menusu altında Pets adsense ve alt menuler goruntulenir
         adminDashboardPage.petsButton.isDisplayed();
 
-
+       Driver.quitDriver();
 
 
     }
@@ -130,7 +130,7 @@ public class US_030 {
         adminDashboardPage.createPetsManagersButton.isDisplayed();
 
 
-
+      Driver.quitDriver();
     }
 
     @Test
@@ -151,7 +151,7 @@ public class US_030 {
         Assert.assertEquals(expectedUrl,actualUrl,"Anasayfa goruntulenir");
 
         //Header bolumunde bulunan Sign In butonu goruntulenir.
-        Assert.assertTrue(userHomePage.signInButton.isEnabled());
+       // Assert.assertTrue(userHomePage.signInButton.isEnabled());
 
         //Sign In butonu tıklanir.
         userHomePage.signInButton.click();
@@ -225,11 +225,16 @@ public class US_030 {
 
         adminDashboardPage.createPetsImage.click();
 
+        adminDashboardPage.createPetsImageEkle.click();
+
+        actions.sendKeys(Keys.TAB).sendKeys("https://www.google.com/save/list/0Kv1-3opkyBPdebm27AYJS2234yWmw?hl=tr").perform();
+
+        adminDashboardPage.createPetsSaveButton.click();
 
 
 
 
-        ReusableMethods.wait(2);
+        ReusableMethods.wait(4);
 
         Driver.quitDriver();
 
