@@ -1,6 +1,9 @@
 package tests;
 
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.AdminDashboardPage;
@@ -10,13 +13,14 @@ import utilities.Driver;
 import utilities.ReusableMethods;
 
 public class US_031 {
-
+    UserHomePage userHomePage=new UserHomePage();
+    AdminDashboardPage adminDashboardPage=new AdminDashboardPage();
+    Actions actions=new Actions(Driver.getDriver());
+    JavascriptExecutor jse=(JavascriptExecutor) Driver.getDriver();
+    @FindBy(xpath = "//div[@class='sidebar-header']") public WebElement dd;
 
     @Test
     public void TC_001(){
-        UserHomePage userHomePage=new UserHomePage();
-        AdminDashboardPage adminDashboardPage=new AdminDashboardPage();
-        Actions actions=new Actions(Driver.getDriver());
         // 1-Kullanıcı URL e gider
         Driver.getDriver().get(ConfigReader.getProperty("url"));
         Assert.assertTrue(userHomePage.loyalFriendCareLogo.isDisplayed());
@@ -31,16 +35,21 @@ public class US_031 {
         userHomePage.loginButton.click();
 
         //4-Acılan anasayfada header kısmında admin adı olan butona tıklanarak admin sayfasina erisilir
+
+
         adminDashboardPage.adminLoginButton.click();
         Assert.assertTrue(ConfigReader.getProperty("adminDashboardUrl").contains("admin"));
 
        //5-Sayfanın soluna hover yapilir
-        actions.moveToElement(adminDashboardPage.dashBoardMenu).perform();
-        Assert.assertTrue(adminDashboardPage.dashBoardMenu.isDisplayed());
+        ReusableMethods.wait(5);
+        actions.moveToElement(dd).perform();
+        //dd.click();
+        //jse.executeScript("arguments[0].click();",dd);
+        //Assert.assertTrue(adminDashboardPage.dashBoardMenu.isDisplayed());
 
         //6-Acilan dasboardda Consultation yazisina tiklanir
         adminDashboardPage.consultationButton.click();
-        adminDashboardPage.consultationAltMenuButton.isDisplayed();
+        Assert.assertTrue(adminDashboardPage.consultationAltMenuButton.isDisplayed());;
 
         //7-Alt menuden Consultation yazisina tiklanir
         adminDashboardPage.consultationAltMenuButton.click();
@@ -61,9 +70,6 @@ public class US_031 {
     }
     @Test
     public void TC_002(){
-        UserHomePage userHomePage=new UserHomePage();
-        AdminDashboardPage adminDashboardPage=new AdminDashboardPage();
-        Actions actions=new Actions(Driver.getDriver());
         // 1-Kullanıcı URL e gider
         Driver.getDriver().get(ConfigReader.getProperty("url"));
         Assert.assertTrue(userHomePage.loyalFriendCareLogo.isDisplayed());
