@@ -168,4 +168,7 @@ public class UserHomePage {
     @FindBy(xpath = "//span[@class='invalid-feedback']")
     public WebElement hataliMailGirisi; // Hatali mail girisi text
 
+    @FindBy(xpath = "//div[@class='ml-4 text-lg text-gray-500 uppercase tracking-wider']")
+    public WebElement adminOlmayanKullaniciUyarisi;
+
 }

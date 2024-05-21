@@ -162,6 +162,14 @@ public class AdminDashboardPage {
 
 
 
+   @FindBy(xpath = "//img[@src='https://qa.loyalfriendcare.com/images/6628e613c44309475.jpg']")
+    public WebElement adminKullaniciResmi;
+
+   @FindBy(xpath = "//span[text()='Logout']")
+    public WebElement adminLogoutButonu;
+
+
+
 
 
 
