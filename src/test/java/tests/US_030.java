@@ -10,11 +10,12 @@ import pages.UserHomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseCross;
 
 import java.awt.*;
 import java.util.ResourceBundle;
 
-public class US_030 {
+public class US_030 extends TestBaseCross {
 
 
     @Test
@@ -66,8 +67,6 @@ public class US_030 {
 
         //Dashboard menusu altında Pets adsense ve alt menuler goruntulenir
         adminDashboardPage.petsButton.isDisplayed();
-
-       Driver.quitDriver();
 
 
     }
@@ -130,7 +129,7 @@ public class US_030 {
         adminDashboardPage.createPetsManagersButton.isDisplayed();
 
 
-      Driver.quitDriver();
+
     }
 
     @Test
@@ -231,22 +230,24 @@ public class US_030 {
 
         adminDashboardPage.createPetsSaveButton.click();
 
+        actions.moveToElement(adminDashboardPage.admindasboard).perform();
 
+
+        ReusableMethods.wait(2);
+
+        adminDashboardPage.petsButton.click();
+
+
+        adminDashboardPage.createPetsImageDelete.click();
+
+        adminDashboardPage.adminButonu.click();
+
+        adminDashboardPage.adminLogoutButonu.click();
+
+        userHomePage.signOutButton.click();
 
 
         ReusableMethods.wait(4);
-
-        Driver.quitDriver();
-
-
-
-
-
-
-
-
-
-
 
 
 

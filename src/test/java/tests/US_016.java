@@ -9,15 +9,17 @@ import pages.UserHomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseCross;
 
-public class US_016 {
+public class US_016 extends TestBaseCross {
 
-    UserHomePage userHomePage = new UserHomePage();
-    DepartmentsPage departmentsPage = new DepartmentsPage();
-    Actions actions = new Actions(Driver.getDriver());
+
 
     @Test
     public void TC_1601(){
+        UserHomePage userHomePage = new UserHomePage();
+        DepartmentsPage departmentsPage = new DepartmentsPage();
+        Actions actions = new Actions(Driver.getDriver());
 
         //Kayitli Kullanici hedef Url ile Anasayfaya gider.
         Driver.getDriver().get(ConfigReader.getProperty("url"));
@@ -36,12 +38,14 @@ public class US_016 {
         //"Departments of LoyalFriendCare" yazisinin goruntulendigi dogrulanir
         Assert.assertTrue(departmentsPage.departmentsOfLoyalFriendCareLabel.isDisplayed());
 
-        Driver.quitDriver();
 
     }
 
     @Test
     public void TC_1602(){
+        UserHomePage userHomePage = new UserHomePage();
+        DepartmentsPage departmentsPage = new DepartmentsPage();
+        Actions actions = new Actions(Driver.getDriver());
 
         //Kayitli Kullanici hedef Url ile Anasayfaya gider.
         Driver.getDriver().get(ConfigReader.getProperty("url"));
@@ -70,12 +74,15 @@ public class US_016 {
         //Acilan sayfada "Wellness Room" yazisinin goruldugu dogrulanir
         Assert.assertTrue(departmentsPage.wellnessRoomText.isDisplayed());
 
-        Driver.quitDriver();
+
 
     }
 
     @Test
     public void TC_1603(){
+        UserHomePage userHomePage = new UserHomePage();
+        DepartmentsPage departmentsPage = new DepartmentsPage();
+        Actions actions = new Actions(Driver.getDriver());
 
         //Kayitli Kullanici hedef Url ile Anasayfaya gider.
         Driver.getDriver().get(ConfigReader.getProperty("url"));
@@ -102,12 +109,15 @@ public class US_016 {
         //Sayfadaki "Boarding Room" yazan resimli linke tiklanir
         departmentsPage.boardingRoomImage.click(); //Test failed. Bug verdi. Boarding Room yazan resimli link çıkmıyor
 
-        Driver.quitDriver();
+
     }
 
 
     @Test
     public void TC_1604(){
+        UserHomePage userHomePage = new UserHomePage();
+        DepartmentsPage departmentsPage = new DepartmentsPage();
+        Actions actions = new Actions(Driver.getDriver());
 
         //Kayitli Kullanici hedef Url ile Anasayfaya gider.
         Driver.getDriver().get(ConfigReader.getProperty("url"));
@@ -134,11 +144,14 @@ public class US_016 {
         //Sayfadaki "Pain Control Room" yazan resimli linke tiklanir
         departmentsPage.painControlImage.click(); //Test failed. Bug verdi. Pain Control Room yazan resimli link çıkmıyor
 
-        Driver.quitDriver();
+
     }
 
     @Test
     public void TC_1605(){
+        UserHomePage userHomePage = new UserHomePage();
+        DepartmentsPage departmentsPage = new DepartmentsPage();
+        Actions actions = new Actions(Driver.getDriver());
 
         //Kayitli Kullanici hedef Url ile Anasayfaya gider.
         Driver.getDriver().get(ConfigReader.getProperty("url"));
@@ -174,14 +187,9 @@ public class US_016 {
         Assert.assertTrue(departmentsPage.yatakliOdaIlgiliDepartmanYazisi.isDisplayed());
         Assert.assertTrue(departmentsPage.yatakliOdaIlgiliIlacYazisi.isDisplayed());
 
-        Driver.quitDriver();
+
 
     }
-
-
-
-
-
 
 
 }

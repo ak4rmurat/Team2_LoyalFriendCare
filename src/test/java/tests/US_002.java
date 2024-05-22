@@ -6,8 +6,9 @@ import pages.DepartmentsPage;
 import pages.UserHomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.TestBaseCross;
 
-public class US_002 {
+public class US_002 extends TestBaseCross {
 
 
     @Test
@@ -39,7 +40,7 @@ public class US_002 {
         Assert.assertTrue(departmentsPage.departmentsOfLFCText.isDisplayed());
         Assert.assertTrue(departmentsPage.departmentsWellnessButton.isEnabled());
 
-        Driver.quitDriver();
+
 
 
 

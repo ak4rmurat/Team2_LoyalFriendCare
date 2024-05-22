@@ -14,11 +14,12 @@ import pages.VaccinationsPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseCross;
 
 import static utilities.Driver.driver;
 import static utilities.Driver.getDriver;
 
-public class US_003 {
+public class US_003 extends TestBaseCross {
 
 
   @Test

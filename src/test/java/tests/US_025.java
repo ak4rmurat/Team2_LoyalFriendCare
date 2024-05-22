@@ -9,12 +9,13 @@ import pages.UserHomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseCross;
 
 import javax.swing.*;
 
 import static utilities.Driver.driver;
 
-public class US_025 {
+public class US_025 extends TestBaseCross {
 
 
 
@@ -104,7 +105,7 @@ public class US_025 {
 
 
         ReusableMethods.wait(2);
-        Driver.quitDriver();
+
 
 
     }

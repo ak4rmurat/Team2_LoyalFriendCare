@@ -1,6 +1,8 @@
 package tests;
 
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -10,13 +12,15 @@ import pages.AdminDashboardPage;
 import pages.UserHomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
+import utilities.TestBaseCross;
 
 import java.util.List;
 
-public class US_027 {
+public class US_027 extends TestBaseCross {
     UserHomePage userHomePage=new UserHomePage();
     AdminDashboardPage adminDashboardPage=new AdminDashboardPage();
-    Actions actions=new Actions(Driver.getDriver());
+
 
     @Test
     public void TC_001(){
@@ -37,30 +41,40 @@ public class US_027 {
         adminDashboardPage.adminLoginButton.click();
         Assert.assertTrue(ConfigReader.getProperty("adminDashboardUrl").contains("admin"));
 
-       /* //5-Sayfanın soluna hover yapilir
-        actions.moveToElement(adminDashboardPage.dashBoardMenu).perform();
+       //5-Sayfanın soluna hover yapilir
+        adminDashboardPage.dashBoardMenu.click();
+        ReusableMethods.wait(1);
 
 
         //6-Acilan dasboardda Doctors yazisina tiklanir
         adminDashboardPage.doctorsButton.click();
         Assert.assertTrue(adminDashboardPage.doctorsButton.isDisplayed());
         //7-Alt menuden Doctors yazisina tiklanir
-        adminDashboardPage.doctorsDoctorsButton.click();
         Assert.assertTrue(adminDashboardPage.doctorsDoctorsButton.isDisplayed());
+        adminDashboardPage.doctorsDoctorsButton.click();
+
         //8-Doktor sayisinin sayfanin altinda goruntulenir
-        Assert.assertTrue(adminDashboardPage.doctorCountText.getText().contains("8"));*/
+        Assert.assertTrue(adminDashboardPage.doctorCountText.getText().contains("8"));
 
 
         //8-Edit butonu goruntulenir
 
-
+        Assert.assertTrue(adminDashboardPage.doctorsTableEditText.isDisplayed());
 
         //9-Delete butonu goruntulenir
+        Assert.assertTrue(adminDashboardPage.doctorsTableDeleteText.isDisplayed());
+
         //10- Headerdaki Add Doctors butonuna tiklanir
+        adminDashboardPage.doctorsTableAddDoctorsButton.click();
+        Assert.assertTrue(adminDashboardPage.newDoctorsText.getText().contains("Doctors"));
+        Driver.getDriver().navigate().back();
 
         //11- Search Doctors searchboxina doktor ismi girerek arama yapilir
         adminDashboardPage.searchDoctorsTextbox.click();
-        adminDashboardPage.searchDoctorsTextbox.sendKeys("Dr. Alejandro Martinez");
+        adminDashboardPage.searchDoctorsTextbox.sendKeys("Dr. Alejandro Martinez", Keys.ENTER);
+        ReusableMethods.wait(5);
+        Assert.assertTrue(adminDashboardPage.doctorsNameText.getText().equalsIgnoreCase("Dr. Alejandro Martinez"));
+
     }
 }
 

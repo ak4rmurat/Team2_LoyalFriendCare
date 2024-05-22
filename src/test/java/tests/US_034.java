@@ -7,11 +7,12 @@ import pages.UserHomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseCross;
 
-public class US_034 {
+public class US_034 extends TestBaseCross {
 
     @Test
-    public void TC_001(){
+    public void TC_3301(){
         UserHomePage userHomePage = new UserHomePage();
         AdminDashboardPage adminDashboardPage = new AdminDashboardPage();
        // 1 - Kullanici hedef URL'e gider
@@ -28,7 +29,7 @@ public class US_034 {
         ReusableMethods.wait(1);
         Assert.assertTrue(adminDashboardPage.settingsButton.isDisplayed());
 
-        Driver.quitDriver();
+
 
     }
 
@@ -53,6 +54,6 @@ public class US_034 {
       //  5 - Acilan sayfada var olan ayarlari goruntuler
         Assert.assertTrue(adminDashboardPage.youtubeSettingsInfo.isDisplayed());
 
-        Driver.quitDriver();
+
     }
 }

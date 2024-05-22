@@ -5,13 +5,16 @@ import org.testng.annotations.Test;
 import pages.UserHomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.TestBaseCross;
 
-public class US_020 {
+public class US_020 extends TestBaseCross {
 
-    UserHomePage userHomePage = new UserHomePage();
 
     @Test
-    public void TC_01(){
+    public void TC_2001(){
+
+        UserHomePage userHomePage = new UserHomePage();
+
 
         //Kayitli Kullanici hedef Url ile Anasayfaya gider.
         Driver.getDriver().get(ConfigReader.getProperty("url"));
@@ -32,9 +35,6 @@ public class US_020 {
 
         //Admin sayfasina giremedigi ve hata kodu " USER DOES NOT HAVE THE RIGHT ROLES." ile karsilastigi dogrulanir
         userHomePage.adminOlmayanKullaniciUyarisi.isDisplayed();
-
-        Driver.quitDriver();
-
 
 
 

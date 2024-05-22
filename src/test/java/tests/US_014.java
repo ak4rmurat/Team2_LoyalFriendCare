@@ -12,8 +12,9 @@ import pages.VaccinationsPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseCross;
 
-public class US_014 {
+public class US_014 extends TestBaseCross {
 
 
 
@@ -89,7 +90,7 @@ public class US_014 {
         ReusableMethods.wait(2);
 
 
-        Driver.quitDriver();
+
 
     }
 
@@ -151,7 +152,7 @@ public class US_014 {
         ReusableMethods.wait(2);
 
 
-        Driver.quitDriver();
+
     }
 
     @Test
@@ -212,7 +213,7 @@ public class US_014 {
         ReusableMethods.wait(2);
 
 
-        Driver.quitDriver();
+
 
     }
 

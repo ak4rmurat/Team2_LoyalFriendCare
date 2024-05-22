@@ -7,15 +7,17 @@ import pages.UserHomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseCross;
 
-public class US_038 {
+public class US_038 extends TestBaseCross {
 
-    UserHomePage userHomePage = new UserHomePage();
-    AdminDashboardPage adminDashboardPage = new AdminDashboardPage();
 
 
     @Test
-    public void TC_01() {
+    public void TC_3801() {
+
+        UserHomePage userHomePage = new UserHomePage();
+        AdminDashboardPage adminDashboardPage = new AdminDashboardPage();
 
         //Admin, hedef URL ile Anasayfaya gider
         Driver.getDriver().get(ConfigReader.getProperty("url"));
