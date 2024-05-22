@@ -6,6 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
 import java.util.List;
+import java.util.logging.XMLFormatter;
 
 public class AdminDashboardPage {
 
@@ -69,7 +70,6 @@ public class AdminDashboardPage {
     @FindBy(xpath = "//a[normalize-space()='Create User']")
     public WebElement createUsersButton; // Admin Dashboard >> Users >> Create Users
 
-
     // Admin Dashboard Bed Managers Menusu
     @FindBy(xpath = "//span[@class='title'][normalize-space()='Bed managers']")
     public WebElement bedManagersButton; // Admin Dashboard >> Bed Managers
@@ -119,13 +119,8 @@ public class AdminDashboardPage {
     @FindBy(xpath = "(//*[@class=\"text-white no-margin\"])[1]")
     public WebElement welcomeSettingsText; // Admin Dashboard Menu >> Settings  >> Welcome Text
 
-
-
-
-
     @FindBy(xpath = "//div[5]//div[1]//div[2]//div[1]//div[1]//div[1]//h3[1]//span[1]")
     public WebElement youtubeSettingsInfo;  // Admin Dashboard Menu >> Settings >> youtube bilgisi
-
 
     @FindBy(xpath = "//span[@class='title'][normalize-space()='Settings']")
     public WebElement adminDashboardSettingButton; // Admin Dashboard >> Setting
@@ -202,10 +197,8 @@ public class AdminDashboardPage {
     @FindBy(xpath = "//*[@class=\"fa fa-user\"]")
     public WebElement editProfilePage;  // Admin Resim Dropdown >> Edit Profile
 
-
    @FindBy(xpath = "(//*[@class='btn btn-primary btn-sm  btn-rounded m-r-10'])[1]")
     public WebElement createPetsImageEkle;
-
 
    @FindBy(xpath = "(//*[@class='form-control '])[3]")
     public WebElement createPetsImageDowloand;
@@ -242,6 +235,15 @@ public class AdminDashboardPage {
 
     @FindBy(xpath = "//input[@id='search-table']")
     public WebElement searchDoctorsTextbox;
+
+    @FindBy(xpath = "(//*[text()='Delete'])[3]")
+    public WebElement createPetsImageDelete;
+
+    @FindBy(xpath = "//*[@width='32']")
+    public WebElement adminButonu;
+
+    @FindBy(xpath = "//*[text()='Logout']")
+    public WebElement getAdminLogoutButonu;
 
     @FindBy(xpath = "//h2[@class='semi-bold']")
     public WebElement notFound404;
