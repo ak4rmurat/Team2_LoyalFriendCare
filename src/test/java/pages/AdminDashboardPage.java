@@ -6,6 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
 import java.util.List;
+import java.util.logging.XMLFormatter;
 
 public class AdminDashboardPage {
 
@@ -242,6 +243,17 @@ public class AdminDashboardPage {
 
     @FindBy(xpath = "//input[@id='search-table']")
     public WebElement searchDoctorsTextbox;
+
+    @FindBy(xpath = "(//*[text()='Delete'])[3]")
+    public WebElement createPetsImageDelete;
+
+
+    @FindBy(xpath = "//*[@width='32']")
+    public WebElement adminButonu;
+
+    @FindBy(xpath = "//*[text()='Logout']")
+    public WebElement getAdminLogoutButonu;
+
 
 
 
