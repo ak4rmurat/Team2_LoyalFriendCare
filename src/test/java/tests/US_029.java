@@ -123,8 +123,11 @@ public class US_029 extends TestBaseCross {
         adminDashboardPage.createMedicinesSaveButton.click();
 
 
-
         //Olusturulan ilacin karsisindaki "Delete" butonuna tiklanir.
+
+        adminDashboardPage.deleteMedicinesButton.click();
+
+
 
 
 
