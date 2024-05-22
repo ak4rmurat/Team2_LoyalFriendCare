@@ -11,7 +11,7 @@ import utilities.ReusableMethods;
 public class US_034 {
 
     @Test
-    public void TC_001(){
+    public void TC_3301(){
         UserHomePage userHomePage = new UserHomePage();
         AdminDashboardPage adminDashboardPage = new AdminDashboardPage();
        // 1 - Kullanici hedef URL'e gider

@@ -8,10 +8,12 @@ import utilities.Driver;
 
 public class US_020 {
 
-    UserHomePage userHomePage = new UserHomePage();
 
     @Test
-    public void TC_01(){
+    public void TC_2001(){
+
+        UserHomePage userHomePage = new UserHomePage();
+
 
         //Kayitli Kullanici hedef Url ile Anasayfaya gider.
         Driver.getDriver().get(ConfigReader.getProperty("url"));

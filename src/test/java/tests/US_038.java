@@ -10,12 +10,13 @@ import utilities.ReusableMethods;
 
 public class US_038 {
 
-    UserHomePage userHomePage = new UserHomePage();
-    AdminDashboardPage adminDashboardPage = new AdminDashboardPage();
 
 
     @Test
-    public void TC_01() {
+    public void TC_3801() {
+
+        UserHomePage userHomePage = new UserHomePage();
+        AdminDashboardPage adminDashboardPage = new AdminDashboardPage();
 
         //Admin, hedef URL ile Anasayfaya gider
         Driver.getDriver().get(ConfigReader.getProperty("url"));
