@@ -1,7 +1,6 @@
 package tests;
 
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -10,12 +9,10 @@ import pages.UserHomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class US_023 {
+public class US_029 {
 
+    @Test public void TC_2901(){
 
-
-    @Test
-    public void TC_2301(){
         UserHomePage userhomepage = new UserHomePage();
         AdminDashboardPage adminDashboardPage = new AdminDashboardPage();
 
@@ -36,19 +33,21 @@ public class US_023 {
         //Acilan admin sayfasinda bulunan sol acilir menu aktif edilir.
         adminDashboardPage.dashBoardMenu.click();
 
-        //Acilan dashboard uzerinde "Roles" butonuna tiklanir.
-        adminDashboardPage.rolesButton.click();
 
-        //"Roles" butonu altmenuleri olan "Roles" ve "Create Role" butonlarinin gorunur oldugu dogrulanir.
-
-        Assert.assertTrue(adminDashboardPage.rolesRolesButton.isEnabled());
-        Assert.assertTrue(adminDashboardPage.createRolesButton.isEnabled());
+        //Acilan dashboard uzerinde "Medicines" butonuna tiklanir.
+        adminDashboardPage.medicinesButton.click();
 
 
 
-    }
-    @Test
-    public void TC_2302(){
+        //"Medicines" butonu altmenuleri olan "Medicines" ve "Create Medicine" butonlarinin gorunur oldugu dogrulanir.
+        Assert.assertTrue(adminDashboardPage.medicinesMedicinesButton.isEnabled());
+        Assert.assertTrue(adminDashboardPage.createMedicinesButton.isEnabled());
+
+
+            }
+
+    @Test public void TC_2902(){
+
         UserHomePage userhomepage = new UserHomePage();
         AdminDashboardPage adminDashboardPage = new AdminDashboardPage();
 
@@ -69,29 +68,22 @@ public class US_023 {
         //Acilan admin sayfasinda bulunan sol acilir menu aktif edilir.
         adminDashboardPage.dashBoardMenu.click();
 
-        //Acilan dashboard uzerinde "Roles" butonuna tiklanir.
-        adminDashboardPage.rolesButton.click();
+        //Acilan dashboard uzerinde "Medicines" butonuna tiklanir.
+        adminDashboardPage.medicinesButton.click();
 
-        //"Roles" butonu altmenuleri olan "Roles" ve "Create Role" butonlarinin gorunur oldugu dorulanir.
-        Assert.assertTrue(adminDashboardPage.rolesRolesButton.isEnabled());
-        Assert.assertTrue(adminDashboardPage.createRolesButton.isEnabled());
+        //Acilan altmenuden "Medicines" butonuna tiklanir.
+        adminDashboardPage.medicinesMedicinesButton.click();
 
-        //Acilan altmenuden "Roles" butonuna tiklanir.
-        adminDashboardPage.rolesButton.click();
+        // Acilan sayfada "Table Medicines" ve "Showing 1 to 5 of 5 entries" yazisinin goruldugu dogrulanir.
 
-        //Acilan sayfada "Table Roles" yazisinin,
-        // var olan rollerin ve bu rollerin toplam adedinin goruldugu dogrulanir.
-
-       Assert.assertTrue(adminDashboardPage.tableRolesText.isEnabled());
-       Assert.assertTrue(adminDashboardPage.numberOfRolesText.isDisplayed());
-
-
+        Assert.assertTrue(adminDashboardPage.tableMedicinesText.isDisplayed());
+        Assert.assertTrue(adminDashboardPage.showingMedicinesNumberText.isDisplayed());
 
 
     }
 
-    @Test
-    public void TC_2303(){
+    @Test public void TC_2903() {
+
         UserHomePage userhomepage = new UserHomePage();
         AdminDashboardPage adminDashboardPage = new AdminDashboardPage();
         Actions actions = new Actions(Driver.getDriver());
@@ -113,30 +105,30 @@ public class US_023 {
         //Acilan admin sayfasinda bulunan sol acilir menu aktif edilir.
         adminDashboardPage.dashBoardMenu.click();
 
-        //Acilan dashboard uzerinde "Roles" butonuna tiklanir.
-        adminDashboardPage.rolesButton.click();
+        //Acilan dashboard uzerinde "Medicines" butonuna tiklanir.
+        adminDashboardPage.medicinesButton.click();
+
+        //Acilan dashboard uzerinde " Create Medicines" butonuna tiklanir.
+        adminDashboardPage.createMedicinesButton.click();
 
 
-        //Acilan altmenuden "Create Role" butonuna tiklanir.
-        adminDashboardPage.createRolesButton.click();
+        //Acilan sayfa uzerinde, "Medicines Title" kismina "Antibit" ve "Medicines Content" kismina "2 mg png" bilgileri girilir.
 
-
-        //Acilan sayfa uzerinde, ilgili kisimlara "Name" ve "Display Name" bilgileri girilir.
-        actions.sendKeys(adminDashboardPage.createRolesNameTextArea).sendKeys("Supervisor").sendKeys(Keys.TAB).
-                sendKeys("web").perform();
+       actions.sendKeys(adminDashboardPage.medicinesTitleTextArea).sendKeys("Antibit").sendKeys(Keys.TAB)
+               .sendKeys("2 mg png").perform();
 
         //"Save" butonuna tiklanir.
-        adminDashboardPage.createRoleSaveButton.click();
 
-        //"Role Store successfully." yazisi ve eklenen rol goruntulendigi dogrulanir.
-        Assert.assertTrue(adminDashboardPage.roleStoreSuccessfullyAlert.isDisplayed());
-
-        //Olusturulan rolun karsisindaki "Delete" butonuna tiklanir.
-        adminDashboardPage.roleDeleteButton.click();
+        adminDashboardPage.createMedicinesSaveButton.click();
 
 
-        //"Role deleted successfully" yazisi goruntulenir.
-        Assert.assertTrue(adminDashboardPage.roleDeletedSuccessfullyAlert.isDisplayed());
+
+        //Olusturulan ilacin karsisindaki "Delete" butonuna tiklanir.
+
+
+
+
+
 
 
     }
@@ -145,9 +137,4 @@ public class US_023 {
 
 
 
-
-
-
-
-
-}
+    }
