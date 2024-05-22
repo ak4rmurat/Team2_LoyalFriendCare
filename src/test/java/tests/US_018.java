@@ -2,20 +2,25 @@ package tests;
 
 import org.openqa.selenium.Keys;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 import pages.AppointmentBookingPage;
 import pages.MedicinesPage;
 import pages.UserHomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseCross;
 
-public class US_018 {
+public class US_018  extends TestBaseCross{
+
 
 
     @Test
     public void TC_001(){
         UserHomePage userHomePage = new UserHomePage();
+        MedicinesPage medicinesPage = new MedicinesPage();
        // 1 - Kullanici hedef URL'e gider
         Driver.getDriver().get(ConfigReader.getProperty("url"));
        // 2 - "Sing In" butonuna tiklar
@@ -28,8 +33,9 @@ public class US_018 {
        // 5 - Anasaydaki header bolumunden "Medicines"e tiklar
         userHomePage.medicinesDropDown.click();
        // 6 - Sayfada ilaclari goruntuler
+        Assert.assertTrue(medicinesPage.revolutionlMedicineImage.isDisplayed());
+        Assert.assertTrue(medicinesPage.rimadylMedicineImage.isDisplayed());
 
-        Driver.quitDriver();
     }
 
     @Test
@@ -37,6 +43,7 @@ public class US_018 {
         UserHomePage userHomePage = new UserHomePage();
         MedicinesPage medicinesPage = new MedicinesPage();
         AppointmentBookingPage appointmentBookingPage = new AppointmentBookingPage();
+        SoftAssert softAssert = new SoftAssert();
        // 1 - Kullanici hedef URL'e gider
         Driver.getDriver().get(ConfigReader.getProperty("url"));
        // 2 - "Sing In" butonuna tiklar
@@ -62,7 +69,7 @@ public class US_018 {
        // 10 - Ekranda hata mesajı alir.
         Assert.assertFalse(appointmentBookingPage.conformationMassage.isDisplayed());
 
-        Driver.quitDriver();
+
     }
      @Test
     public void TC_003() {
@@ -98,7 +105,6 @@ public class US_018 {
          String actualMessage = appointmentBookingPage.conformationMassage.getText();
          Assert.assertEquals(actualMessage,expectedMessage);
 
-         Driver.quitDriver();
 
     }
     @Test
@@ -130,7 +136,6 @@ public class US_018 {
        // 10 - Ekranda hata mesajı cikar
         Assert.assertFalse(appointmentBookingPage.conformationMassage.isDisplayed());
 
-        Driver.quitDriver();
 
     }
 }
