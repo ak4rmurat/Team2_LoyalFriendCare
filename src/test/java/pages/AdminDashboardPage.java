@@ -49,6 +49,18 @@ public class AdminDashboardPage {
     @FindBy(xpath = "//a[normalize-space()='Create Medicines']")
     public WebElement createMedicinesButton; // Admin Dashboard >> Medicines >> Create Medicines
 
+    @FindBy(xpath = "//div[@class='card-title']")
+    public WebElement tableMedicinesText; // Admin Dashboard >> Medicines >> Medicines
+
+    @FindBy(xpath = "//div[@id='tableWithSearch_info']")
+    public WebElement showingMedicinesNumberText; // Admin Dashboard >> Medicines >> Medicines
+
+    @FindBy(xpath = "//input[@id='Title_en']")
+    public WebElement medicinesTitleTextArea; // Admin Dashboard >> Medicines >> Create Medicines
+
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement createMedicinesSaveButton; // Admin Dashboard >> Medicines >> Create Medicines
+
     @FindBy(xpath = "//span[normalize-space()='Vaccinations']")
     public WebElement vaccinationsButton; // Admin Dashboard >> Vaccinations
 
@@ -236,6 +248,24 @@ public class AdminDashboardPage {
     @FindBy(xpath = "//input[@id='search-table']")
     public WebElement searchDoctorsTextbox;
 
+    @FindBy(xpath = "//span[normalize-space()='Role Store successfully.']")
+    public WebElement roleStoreSuccessfullyAlert; // Admin Dasboard >> Roles >> Create Roles >> Save Button
+    // Role Store Successfully Text
+
+    @FindBy (xpath = "/html[1]/body[1]/div[1]/div[2]/div[2]/div[2]/div[1]/div[2]/div[1]" +
+            "/div[1]/table[1]/tbody[1]/tr[7]/td[4]/form[1]/button[1]")
+    public WebElement roleDeleteButton; // Dinamik değildir.
+
+    @FindBy(xpath = "//span[normalize-space()='Role deleted successfully']")
+    public WebElement roleDeletedSuccessfullyAlert; // Admin Dasboard >> Roles >> Create Roles >> Save Button
+    // Delete Button >> Role Deleted Successfully
+
+    @FindBy(xpath = "//input[@id='name']")
+    public WebElement createRolesNameTextArea; // Admin Dasboard >> Roles >> Create Roles
+
+     @FindBy(xpath = "//button[@type='submit']")
+    public WebElement createRoleSaveButton;// Admin Dasboard >> Roles >> Create Roles
+
     @FindBy(xpath = "(//*[text()='Delete'])[3]")
     public WebElement createPetsImageDelete;
 
@@ -326,6 +356,7 @@ public class AdminDashboardPage {
 
     @FindBy(xpath = "(//span[text()='Delete'])[1]")
     public WebElement asiDeleteButton;//Admin Dashboard>> Vaccinations Menu>> asiDeleteButton
+
 
 
 
