@@ -8,8 +8,9 @@ import pages.AdminDashboardPage;
 import pages.UserHomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.TestBaseCross;
 
-public class US_029 {
+public class US_029 extends TestBaseCross {
 
     @Test public void TC_2901(){
 

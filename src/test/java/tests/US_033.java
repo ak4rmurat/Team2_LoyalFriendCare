@@ -11,10 +11,11 @@ import pages.UserHomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseCross;
 
 import java.lang.reflect.Array;
 
-public class US_033 {
+public class US_033 extends TestBaseCross {
 
 
     @Test
@@ -47,7 +48,7 @@ public class US_033 {
         //Sol acilir menuden "Vaccinations" menusunun yanindaki oka tiklanarak alt menusunun gorunur oldugu dogrulanir ve alt menu tiklanir
         adminDashboardPage.vaccinationsAltMenuArrow.click(); // failed. bug var. vaccinations menusunun yaninda alt menuleri acacak ok yok. alt menuler yok
 
-        Driver.quitDriver();
+
 
     }
 
@@ -80,7 +81,7 @@ public class US_033 {
         actions.sendKeys(Keys.PAGE_DOWN).perform();
         Assert.assertTrue(adminDashboardPage.asiSayisiYazisi.isDisplayed());
 
-        Driver.quitDriver();
+
 
         /*
 
@@ -145,7 +146,7 @@ public class US_033 {
         }
         Assert.assertTrue(asiVarmi);
 
-        Driver.quitDriver();
+
 
     }
     @Test
@@ -202,7 +203,7 @@ public class US_033 {
         }
         Assert.assertTrue(asiVarmi);
 
-        Driver.quitDriver();
+
 
 
     }
@@ -247,7 +248,7 @@ public class US_033 {
         }
         Assert.assertFalse(asiVarmi);
 
-        Driver.quitDriver();
+
 
     }
 
@@ -292,7 +293,7 @@ public class US_033 {
 
         Assert.assertTrue(adminDashboardPage.addVaccinationSaveButton.isDisplayed());
 
-        Driver.quitDriver();
+
 
     }
 
@@ -341,7 +342,7 @@ public class US_033 {
         Assert.assertTrue(adminDashboardPage.addVaccinationSaveButton.isDisplayed());// test failed. bug cikti.
                                                                                      // gecersiz veri girisinde kayit islemi gerceklesmemeliydi
 
-        Driver.quitDriver();
+
 
     }
 
@@ -390,13 +391,9 @@ public class US_033 {
         Assert.assertTrue(adminDashboardPage.addVaccinationSaveButton.isDisplayed());// test failed. bug cikti.
                                                         // gecersiz veri girisinde kayit islemi gerceklesmemeliydi
 
-        Driver.quitDriver();
 
 
     }
-
-
-
 
 
 

@@ -13,10 +13,11 @@ import pages.UserHomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseCross;
 
 import java.util.List;
 
-public class US_027 {
+public class US_027 extends TestBaseCross {
     UserHomePage userHomePage=new UserHomePage();
     AdminDashboardPage adminDashboardPage=new AdminDashboardPage();
 

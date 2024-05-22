@@ -7,8 +7,9 @@ import pages.UserHomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseCross;
 
-public class US_038 {
+public class US_038 extends TestBaseCross {
 
 
 

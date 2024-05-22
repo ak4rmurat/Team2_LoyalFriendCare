@@ -13,10 +13,11 @@ import pages.VaccinationsPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseCross;
 
 import static utilities.Driver.driver;
 
-public class US_011 {
+public class US_011 extends TestBaseCross {
 
 
     @Test
@@ -151,7 +152,7 @@ public class US_011 {
 
 
 
-        Driver.quitDriver();
+
 
     }
 
@@ -191,7 +192,7 @@ public class US_011 {
         // 4 - Sifrenin hatali girildigi mesajı goruntulenir.
 
 
-        Driver.quitDriver();
+
 
     }
 
@@ -235,7 +236,7 @@ public class US_011 {
 
 
 
-        Driver.quitDriver();
+
 
     }
 }

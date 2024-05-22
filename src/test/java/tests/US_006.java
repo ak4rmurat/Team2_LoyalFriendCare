@@ -6,8 +6,9 @@ import pages.UserHomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseCross;
 
-public class US_006 {
+public class US_006 extends TestBaseCross {
 
     @Test
     public void TC0601(){
@@ -81,26 +82,6 @@ public class US_006 {
 
 
         ReusableMethods.wait(3);
-
-
-
-
-
-
-
-
-
-
-
-
-
-        Driver.quitDriver();
-
-
-
-
-
-
 
 
 

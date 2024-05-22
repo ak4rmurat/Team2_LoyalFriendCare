@@ -7,8 +7,9 @@ import org.testng.asserts.SoftAssert;
 import pages.UserHomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.TestBaseCross;
 
-public class US_005 {
+public class US_005 extends TestBaseCross {
 
 
     @Test
@@ -77,7 +78,7 @@ public class US_005 {
 
 
 
-         Driver.quitDriver();
+
 
     }
 }

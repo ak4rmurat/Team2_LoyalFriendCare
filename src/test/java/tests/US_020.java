@@ -5,8 +5,9 @@ import org.testng.annotations.Test;
 import pages.UserHomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.TestBaseCross;
 
-public class US_020 {
+public class US_020 extends TestBaseCross {
 
 
     @Test
@@ -34,9 +35,6 @@ public class US_020 {
 
         //Admin sayfasina giremedigi ve hata kodu " USER DOES NOT HAVE THE RIGHT ROLES." ile karsilastigi dogrulanir
         userHomePage.adminOlmayanKullaniciUyarisi.isDisplayed();
-
-        Driver.quitDriver();
-
 
 
 

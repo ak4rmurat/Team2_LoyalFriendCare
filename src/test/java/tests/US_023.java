@@ -9,8 +9,9 @@ import pages.AdminDashboardPage;
 import pages.UserHomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.TestBaseCross;
 
-public class US_023 {
+public class US_023 extends TestBaseCross {
 
 
 
@@ -140,12 +141,6 @@ public class US_023 {
 
 
     }
-
-
-
-
-
-
 
 
 

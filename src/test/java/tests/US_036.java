@@ -8,10 +8,11 @@ import pages.UserHomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseCross;
 
 import static utilities.Driver.driver;
 
-public class US_036 {
+public class US_036 extends TestBaseCross {
 
 
     @Test
@@ -76,7 +77,7 @@ public class US_036 {
         Assert.assertTrue(userHomePage.loyalFriendCareHeaderLogo.isEnabled());
 
         ReusableMethods.wait(2);
-        Driver.quitDriver();
+
 
     }
 }

@@ -12,8 +12,9 @@ import pages.VaccinationsPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseCross;
 
-public class US_019 {
+public class US_019 extends TestBaseCross {
 
 
 
@@ -124,7 +125,6 @@ public class US_019 {
 
         ReusableMethods.wait(4);
 
-        Driver.quitDriver();
 
 
     }

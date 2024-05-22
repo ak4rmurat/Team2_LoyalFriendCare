@@ -9,8 +9,9 @@ import pages.UserHomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseCross;
 
-public class US_016 {
+public class US_016 extends TestBaseCross {
 
 
 
@@ -37,7 +38,6 @@ public class US_016 {
         //"Departments of LoyalFriendCare" yazisinin goruntulendigi dogrulanir
         Assert.assertTrue(departmentsPage.departmentsOfLoyalFriendCareLabel.isDisplayed());
 
-        Driver.quitDriver();
 
     }
 
@@ -74,7 +74,7 @@ public class US_016 {
         //Acilan sayfada "Wellness Room" yazisinin goruldugu dogrulanir
         Assert.assertTrue(departmentsPage.wellnessRoomText.isDisplayed());
 
-        Driver.quitDriver();
+
 
     }
 
@@ -109,7 +109,7 @@ public class US_016 {
         //Sayfadaki "Boarding Room" yazan resimli linke tiklanir
         departmentsPage.boardingRoomImage.click(); //Test failed. Bug verdi. Boarding Room yazan resimli link çıkmıyor
 
-        Driver.quitDriver();
+
     }
 
 
@@ -144,7 +144,7 @@ public class US_016 {
         //Sayfadaki "Pain Control Room" yazan resimli linke tiklanir
         departmentsPage.painControlImage.click(); //Test failed. Bug verdi. Pain Control Room yazan resimli link çıkmıyor
 
-        Driver.quitDriver();
+
     }
 
     @Test
@@ -187,14 +187,9 @@ public class US_016 {
         Assert.assertTrue(departmentsPage.yatakliOdaIlgiliDepartmanYazisi.isDisplayed());
         Assert.assertTrue(departmentsPage.yatakliOdaIlgiliIlacYazisi.isDisplayed());
 
-        Driver.quitDriver();
+
 
     }
-
-
-
-
-
 
 
 }

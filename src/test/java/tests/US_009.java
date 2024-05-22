@@ -9,8 +9,9 @@ import pages.VaccinationsPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseCross;
 
-public class US_009 {
+public class US_009 extends TestBaseCross {
 
 
     @Test
@@ -32,7 +33,7 @@ public class US_009 {
         Assert.assertTrue(userHomePage.homeButton.isDisplayed());
         Assert.assertTrue(userHomePage.medicinesDropDown.isDisplayed());
 
-        Driver.quitDriver();
+
 
     }
 
@@ -56,7 +57,6 @@ public class US_009 {
         Assert.assertTrue(doctorsPage.doctorsIssabella.isDisplayed());
         Assert.assertTrue(doctorsPage.drSophiaKim.isDisplayed());
 
-        Driver.quitDriver();
 
     }
 
@@ -80,7 +80,7 @@ public class US_009 {
         Assert.assertTrue(vaccinationsPage.rabbiesVaccineImage.isDisplayed());
         Assert.assertTrue(vaccinationsPage.felineImmunodeficiencyVaccineImage.isDisplayed());
 
-        Driver.quitDriver();
+
 
 
     }

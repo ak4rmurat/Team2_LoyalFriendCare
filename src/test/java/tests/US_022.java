@@ -10,8 +10,10 @@ import pages.UserHomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseCross;
 
-public class US_022 {
+
+public class US_022 extends TestBaseCross{
 
 
 
@@ -64,12 +66,6 @@ public class US_022 {
 
 
          ReusableMethods.wait(1);
-
-         Driver.quitDriver();
-
-
-
-
 
 
 
@@ -154,11 +150,6 @@ public class US_022 {
 
 
        ReusableMethods.wait(3);
-
-       Driver.quitDriver();
-
-
-
 
 
 

@@ -11,8 +11,9 @@ import pages.UserHomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseCross;
 
-public class US_007 {
+public class US_007 extends TestBaseCross {
 
 
    @Test
@@ -38,7 +39,7 @@ public class US_007 {
        userHomePage.signUpKayitButton.click();
        // 5 - Anasayfada "Sign Out" butonu goruntuler
        Assert.assertTrue(userHomePage.signOutButton.isDisplayed());
-       Driver.quitDriver();
+
 
    }
 
@@ -63,7 +64,7 @@ public class US_007 {
         userHomePage.signOutButton.click();
         Driver.driver.navigate().refresh();
 
-        Driver.quitDriver();
+
     }
 
 
