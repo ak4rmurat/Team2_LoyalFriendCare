@@ -244,6 +244,42 @@ public class AdminDashboardPage {
     public WebElement searchDoctorsTextbox;
 
 
+    @FindBy(xpath = "(//p[@class='bold text-white no-margin fs-10 font-montserrat lh-normal'])[2]")
+    public WebElement dashboardAdminText;
+
+
+
+    //Admin Dashboard>> Vaccinations Menu
+    @FindBy(xpath ="(//span[@class='arrow'])[10]")
+    public WebElement vaccinationsAltMenuArrow;//Admin Dashboard>> Vaccinations Menu>>vaccinationsAltMenuArrow
+
+    @FindBy(id = "tableWithSearch_info")
+    public WebElement asiSayisiYazisi;//Admin Dashboard>> Vaccinations Menu>>asi Sayisi yazisi
+
+    @FindBy(xpath = "//a[@class='btn btn-tag btn-success btn-tag-rounded']")
+    public WebElement addVaccinationsButton;//Admin Dashboard>> Vaccinations Menu>> addVaccinationsButton
+
+    @FindBy(xpath = "(//input[@type='text'])[1]")
+    public WebElement addVaccinationTitleTextBox;//Admin Dashboard>> Vaccinations Menu>> addVaccinationsButton>>
+
+    @FindBy(xpath = "//*[text()='save']")
+    public WebElement addVaccinationSaveButton;//Admin Dashboard>> Vaccinations Menu>> addVaccinationTitleTextBox
+
+    @FindBy(xpath = "//tbody/tr/td[2]")
+    public List<WebElement> asiElemanlariListesi;//Admin Dashboard>> Vaccinations Menu>> addVaccinationsButton>>asiElemanlariListesi
+
+    @FindBy(xpath = "(//tbody/tr/td[4])[9]")
+    public WebElement asiEditButton;//Admin Dashboard>> Vaccinations Menu>> asiEditButton
+
+    @FindBy(xpath = "//input[@id='button']")
+    public WebElement dontChangeImageRadyoButton;//Admin Dashboard>> Vaccinations Menu>> asiEditButton>> dontChangeImageRadyoButton
+
+    @FindBy(xpath = "(//span[text()='Delete'])[1]")
+    public WebElement asiDeleteButton;//Admin Dashboard>> Vaccinations Menu>> asiDeleteButton
+
+
+
+
 
 
 

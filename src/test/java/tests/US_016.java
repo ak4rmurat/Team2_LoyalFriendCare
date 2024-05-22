@@ -12,12 +12,13 @@ import utilities.ReusableMethods;
 
 public class US_016 {
 
-    UserHomePage userHomePage = new UserHomePage();
-    DepartmentsPage departmentsPage = new DepartmentsPage();
-    Actions actions = new Actions(Driver.getDriver());
+
 
     @Test
     public void TC_1601(){
+        UserHomePage userHomePage = new UserHomePage();
+        DepartmentsPage departmentsPage = new DepartmentsPage();
+        Actions actions = new Actions(Driver.getDriver());
 
         //Kayitli Kullanici hedef Url ile Anasayfaya gider.
         Driver.getDriver().get(ConfigReader.getProperty("url"));
@@ -42,6 +43,9 @@ public class US_016 {
 
     @Test
     public void TC_1602(){
+        UserHomePage userHomePage = new UserHomePage();
+        DepartmentsPage departmentsPage = new DepartmentsPage();
+        Actions actions = new Actions(Driver.getDriver());
 
         //Kayitli Kullanici hedef Url ile Anasayfaya gider.
         Driver.getDriver().get(ConfigReader.getProperty("url"));
@@ -76,6 +80,9 @@ public class US_016 {
 
     @Test
     public void TC_1603(){
+        UserHomePage userHomePage = new UserHomePage();
+        DepartmentsPage departmentsPage = new DepartmentsPage();
+        Actions actions = new Actions(Driver.getDriver());
 
         //Kayitli Kullanici hedef Url ile Anasayfaya gider.
         Driver.getDriver().get(ConfigReader.getProperty("url"));
@@ -108,6 +115,9 @@ public class US_016 {
 
     @Test
     public void TC_1604(){
+        UserHomePage userHomePage = new UserHomePage();
+        DepartmentsPage departmentsPage = new DepartmentsPage();
+        Actions actions = new Actions(Driver.getDriver());
 
         //Kayitli Kullanici hedef Url ile Anasayfaya gider.
         Driver.getDriver().get(ConfigReader.getProperty("url"));
@@ -139,6 +149,9 @@ public class US_016 {
 
     @Test
     public void TC_1605(){
+        UserHomePage userHomePage = new UserHomePage();
+        DepartmentsPage departmentsPage = new DepartmentsPage();
+        Actions actions = new Actions(Driver.getDriver());
 
         //Kayitli Kullanici hedef Url ile Anasayfaya gider.
         Driver.getDriver().get(ConfigReader.getProperty("url"));
