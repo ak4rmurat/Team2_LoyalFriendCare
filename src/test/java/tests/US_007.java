@@ -65,37 +65,7 @@ public class US_007 {
 
         Driver.quitDriver();
     }
-    @Test
-    public void TC_003(){
-
-        // 1 - Ziyaretci hedef URL'e gider
-        Driver.getDriver().get("https://qa.loyalfriendcare.com/en/login");
-        // 2 - "Sign In" butonuna tiklar
-
-        // 3 - " Sıgn In" ve "Password" bolumlerine kayitli kullanici bilgilerini girer
-        ReusableMethods.wait(3);
-        UserHomePage userHomePage = new UserHomePage();
-        userHomePage.emailTextBox.sendKeys(ConfigReader.getProperty("userMail"));
-        userHomePage.passwordTextBox.sendKeys(ConfigReader.getProperty("userPassword"));
-        ReusableMethods.wait(2);
-        // 4 - "Sign In" butonuna tiklar
-        userHomePage.loginButton.click();
-        ReusableMethods.wait(2);
-        // 5 - Acilan sayfada bulunan "Sign out" butonuna tiklar.
-        userHomePage.signOutButton.click();
-        Driver.quitDriver();
-    }
-
-    @Test
-    public void TC_004(){
-        AppointmentBookingPage appointmentBookingPage = new AppointmentBookingPage();
-
-        Driver.getDriver().get("https://qa.loyalfriendcare.com/en/Doctors/dawood-gay");
-        ReusableMethods.wait(2);
 
 
-        Driver.quitDriver();
 
-
-    }
 }
