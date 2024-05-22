@@ -8,7 +8,7 @@ import utilities.Driver;
 
 public class US_001 {
     @Test
-    public void TC01(){
+    public void TC_0101(){
         UserHomePage userHomePage = new UserHomePage();
 
         //Ziyaretçi, belirtilen URL'e gider

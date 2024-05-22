@@ -83,6 +83,8 @@ public class DoctorsPage {
   
     @FindBy(xpath = "//h1[text()=' Dr. Olivia Bennett']") 
     public WebElement  drOliviaBennettText;//Home>Departments> drOliviaBennett> baslık text
+
+
   
 
 
