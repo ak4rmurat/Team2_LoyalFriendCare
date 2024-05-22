@@ -258,12 +258,75 @@ public class AdminDashboardPage {
     @FindBy(xpath = "//p[normalize-space()='Dr. Alejandro Martinez']")
     public WebElement doctorsNameText; //admin dashboard> doctors> doctors> tablo delete baslıgı
 
-
     @FindBy(xpath = "//a[@class='btn btn-tag btn-success btn-tag-rounded']")
     public WebElement doctorsTableAddDoctorsButton; //admin dashboard> doctors> doctors> add doctors buton
 
     @FindBy(xpath = "//h3[normalize-space()='New Doctors']")
     public WebElement newDoctorsText; //admin dashboard> doctors> create dcotors> new doctor yazisi
+
+    @FindBy(xpath = "//tbody/tr[1]/td[1]")
+    public WebElement departmetntsList;
+
+    @FindBy(xpath = "//input[@name='parent_id']")
+    public WebElement createDepartmentsBox;
+
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement createDepartmentsDeleteButton;
+
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement createDepartmentsSaveButton;
+
+    @FindBy(xpath = "//tbody/tr[9]/td[1]")
+    public WebElement newDepartments;
+
+    @FindBy(xpath = "//div[@class='alert alert-danger']")
+    public WebElement departmentsSuccessDeleteText;
+
+    @FindBy(xpath = "//a[@class='btn btn-complete btn-cons btn-animated from-left fa fa-edit']")
+    public WebElement createDepartmentsEditButton;
+
+    @FindBy(xpath = "//h3[contains(text(),'Edit')]")
+    public WebElement editDepartmentsEditText;
+
+    @FindBy(xpath = "//input[@name='parent_id']")
+    public WebElement editDepartmentsParentsBox;
+
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement editSaveDepartmentsButton;
+
+    @FindBy(xpath = "(//p[@class='bold text-white no-margin fs-10 font-montserrat lh-normal'])[2]")
+    public WebElement dashboardAdminText;
+
+    //Admin Dashboard>> Vaccinations Menu
+    @FindBy(xpath ="(//span[@class='arrow'])[10]")
+    public WebElement vaccinationsAltMenuArrow;//Admin Dashboard>> Vaccinations Menu>>vaccinationsAltMenuArrow
+
+    @FindBy(id = "tableWithSearch_info")
+    public WebElement asiSayisiYazisi;//Admin Dashboard>> Vaccinations Menu>>asi Sayisi yazisi
+
+    @FindBy(xpath = "//a[@class='btn btn-tag btn-success btn-tag-rounded']")
+    public WebElement addVaccinationsButton;//Admin Dashboard>> Vaccinations Menu>> addVaccinationsButton
+
+    @FindBy(xpath = "(//input[@type='text'])[1]")
+    public WebElement addVaccinationTitleTextBox;//Admin Dashboard>> Vaccinations Menu>> addVaccinationsButton>>
+
+    @FindBy(xpath = "//*[text()='save']")
+    public WebElement addVaccinationSaveButton;//Admin Dashboard>> Vaccinations Menu>> addVaccinationTitleTextBox
+
+    @FindBy(xpath = "//tbody/tr/td[2]")
+    public List<WebElement> asiElemanlariListesi;//Admin Dashboard>> Vaccinations Menu>> addVaccinationsButton>>asiElemanlariListesi
+
+    @FindBy(xpath = "(//tbody/tr/td[4])[9]")
+    public WebElement asiEditButton;//Admin Dashboard>> Vaccinations Menu>> asiEditButton
+
+    @FindBy(xpath = "//input[@id='button']")
+    public WebElement dontChangeImageRadyoButton;//Admin Dashboard>> Vaccinations Menu>> asiEditButton>> dontChangeImageRadyoButton
+
+    @FindBy(xpath = "(//span[text()='Delete'])[1]")
+    public WebElement asiDeleteButton;//Admin Dashboard>> Vaccinations Menu>> asiDeleteButton
+
+
+
 
 
 
