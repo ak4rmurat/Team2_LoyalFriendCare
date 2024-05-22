@@ -6,6 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
 import java.util.List;
+import java.util.logging.XMLFormatter;
 
 public class AdminDashboardPage {
 
@@ -81,7 +82,6 @@ public class AdminDashboardPage {
     @FindBy(xpath = "//a[normalize-space()='Create User']")
     public WebElement createUsersButton; // Admin Dashboard >> Users >> Create Users
 
-
     // Admin Dashboard Bed Managers Menusu
     @FindBy(xpath = "//span[@class='title'][normalize-space()='Bed managers']")
     public WebElement bedManagersButton; // Admin Dashboard >> Bed Managers
@@ -131,13 +131,8 @@ public class AdminDashboardPage {
     @FindBy(xpath = "(//*[@class=\"text-white no-margin\"])[1]")
     public WebElement welcomeSettingsText; // Admin Dashboard Menu >> Settings  >> Welcome Text
 
-
-
-
-
     @FindBy(xpath = "//div[5]//div[1]//div[2]//div[1]//div[1]//div[1]//h3[1]//span[1]")
     public WebElement youtubeSettingsInfo;  // Admin Dashboard Menu >> Settings >> youtube bilgisi
-
 
     @FindBy(xpath = "//span[@class='title'][normalize-space()='Settings']")
     public WebElement adminDashboardSettingButton; // Admin Dashboard >> Setting
@@ -214,10 +209,8 @@ public class AdminDashboardPage {
     @FindBy(xpath = "//*[@class=\"fa fa-user\"]")
     public WebElement editProfilePage;  // Admin Resim Dropdown >> Edit Profile
 
-
    @FindBy(xpath = "(//*[@class='btn btn-primary btn-sm  btn-rounded m-r-10'])[1]")
     public WebElement createPetsImageEkle;
-
 
    @FindBy(xpath = "(//*[@class='form-control '])[3]")
     public WebElement createPetsImageDowloand;
@@ -272,6 +265,101 @@ public class AdminDashboardPage {
 
      @FindBy(xpath = "//button[@type='submit']")
     public WebElement createRoleSaveButton;// Admin Dasboard >> Roles >> Create Roles
+
+    @FindBy(xpath = "(//*[text()='Delete'])[3]")
+    public WebElement createPetsImageDelete;
+
+    @FindBy(xpath = "//*[@width='32']")
+    public WebElement adminButonu;
+
+    @FindBy(xpath = "//*[text()='Logout']")
+    public WebElement getAdminLogoutButonu;
+
+    @FindBy(xpath = "//h2[@class='semi-bold']")
+    public WebElement notFound404;
+
+    @FindBy(xpath = "//*[text()='PowerPoint Presentation']")
+    public WebElement ppPresentationText;
+
+    @FindBy(xpath = "//th[@aria-label='Edit: activate to sort column ascending']")
+    public WebElement doctorsTableEditText; //admin dashboard> doctors> doctors> tablo edit baslıgı
+
+    @FindBy(xpath = "//th[@aria-label='DELETE: activate to sort column ascending']")
+    public WebElement doctorsTableDeleteText; //admin dashboard> doctors> doctors> tablo delete baslıgı
+
+    @FindBy(xpath = "//p[normalize-space()='Dr. Alejandro Martinez']")
+    public WebElement doctorsNameText; //admin dashboard> doctors> doctors> tablo delete baslıgı
+
+    @FindBy(xpath = "//a[@class='btn btn-tag btn-success btn-tag-rounded']")
+    public WebElement doctorsTableAddDoctorsButton; //admin dashboard> doctors> doctors> add doctors buton
+
+    @FindBy(xpath = "//h3[normalize-space()='New Doctors']")
+    public WebElement newDoctorsText; //admin dashboard> doctors> create dcotors> new doctor yazisi
+
+    @FindBy(xpath = "//tbody/tr[1]/td[1]")
+    public WebElement departmetntsList;
+
+    @FindBy(xpath = "//input[@name='parent_id']")
+    public WebElement createDepartmentsBox;
+
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement createDepartmentsDeleteButton;
+
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement createDepartmentsSaveButton;
+
+    @FindBy(xpath = "//tbody/tr[9]/td[1]")
+    public WebElement newDepartments;
+
+    @FindBy(xpath = "//div[@class='alert alert-danger']")
+    public WebElement departmentsSuccessDeleteText;
+
+    @FindBy(xpath = "//a[@class='btn btn-complete btn-cons btn-animated from-left fa fa-edit']")
+    public WebElement createDepartmentsEditButton;
+
+    @FindBy(xpath = "//h3[contains(text(),'Edit')]")
+    public WebElement editDepartmentsEditText;
+
+    @FindBy(xpath = "//input[@name='parent_id']")
+    public WebElement editDepartmentsParentsBox;
+
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement editSaveDepartmentsButton;
+
+    @FindBy(xpath = "(//p[@class='bold text-white no-margin fs-10 font-montserrat lh-normal'])[2]")
+    public WebElement dashboardAdminText;
+
+    //Admin Dashboard>> Vaccinations Menu
+    @FindBy(xpath ="(//span[@class='arrow'])[10]")
+    public WebElement vaccinationsAltMenuArrow;//Admin Dashboard>> Vaccinations Menu>>vaccinationsAltMenuArrow
+
+    @FindBy(id = "tableWithSearch_info")
+    public WebElement asiSayisiYazisi;//Admin Dashboard>> Vaccinations Menu>>asi Sayisi yazisi
+
+    @FindBy(xpath = "//a[@class='btn btn-tag btn-success btn-tag-rounded']")
+    public WebElement addVaccinationsButton;//Admin Dashboard>> Vaccinations Menu>> addVaccinationsButton
+
+    @FindBy(xpath = "(//input[@type='text'])[1]")
+    public WebElement addVaccinationTitleTextBox;//Admin Dashboard>> Vaccinations Menu>> addVaccinationsButton>>
+
+    @FindBy(xpath = "//*[text()='save']")
+    public WebElement addVaccinationSaveButton;//Admin Dashboard>> Vaccinations Menu>> addVaccinationTitleTextBox
+
+    @FindBy(xpath = "//tbody/tr/td[2]")
+    public List<WebElement> asiElemanlariListesi;//Admin Dashboard>> Vaccinations Menu>> addVaccinationsButton>>asiElemanlariListesi
+
+    @FindBy(xpath = "(//tbody/tr/td[4])[9]")
+    public WebElement asiEditButton;//Admin Dashboard>> Vaccinations Menu>> asiEditButton
+
+    @FindBy(xpath = "//input[@id='button']")
+    public WebElement dontChangeImageRadyoButton;//Admin Dashboard>> Vaccinations Menu>> asiEditButton>> dontChangeImageRadyoButton
+
+    @FindBy(xpath = "(//span[text()='Delete'])[1]")
+    public WebElement asiDeleteButton;//Admin Dashboard>> Vaccinations Menu>> asiDeleteButton
+
+
+
+
 
 
 

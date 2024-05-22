@@ -15,9 +15,8 @@ import utilities.ReusableMethods;
 public class US_031 {
     UserHomePage userHomePage=new UserHomePage();
     AdminDashboardPage adminDashboardPage=new AdminDashboardPage();
-    Actions actions=new Actions(Driver.getDriver());
-    JavascriptExecutor jse=(JavascriptExecutor) Driver.getDriver();
-    @FindBy(xpath = "//div[@class='sidebar-header']") public WebElement dd;
+
+
 
     @Test
     public void TC_001(){
@@ -41,11 +40,8 @@ public class US_031 {
         Assert.assertTrue(ConfigReader.getProperty("adminDashboardUrl").contains("admin"));
 
        //5-Sayfanın soluna hover yapilir
-        ReusableMethods.wait(5);
-        actions.moveToElement(dd).perform();
-        //dd.click();
-        //jse.executeScript("arguments[0].click();",dd);
-        //Assert.assertTrue(adminDashboardPage.dashBoardMenu.isDisplayed());
+        adminDashboardPage.dashBoardMenu.click();
+        ReusableMethods.wait(1);
 
         //6-Acilan dasboardda Consultation yazisina tiklanir
         adminDashboardPage.consultationButton.click();
@@ -70,6 +66,7 @@ public class US_031 {
     }
     @Test
     public void TC_002(){
+
         // 1-Kullanıcı URL e gider
         Driver.getDriver().get(ConfigReader.getProperty("url"));
         Assert.assertTrue(userHomePage.loyalFriendCareLogo.isDisplayed());
@@ -87,9 +84,9 @@ public class US_031 {
         adminDashboardPage.adminLoginButton.click();
         Assert.assertTrue(ConfigReader.getProperty("adminDashboardUrl").contains("admin"));
 
-        /*//5-Sayfanın soluna hover yapilir
-        actions.moveToElement(adminDashboardPage.dashBoardMenu).perform();
-        Assert.assertTrue(adminDashboardPage.dashBoardMenu.isDisplayed());
+        //5-Sayfanın soluna hover yapilir
+        adminDashboardPage.dashBoardMenu.click();
+        ReusableMethods.wait(1);
 
         //6-Acilan dasboardda Consultation yazisina tiklanir
         adminDashboardPage.consultationButton.click();
@@ -99,12 +96,7 @@ public class US_031 {
         adminDashboardPage.consultationAltMenuButton.click();
         Assert.assertTrue(adminDashboardPage.consultationTitleH5.getText().equalsIgnoreCase("consultation"));
 
-        //8-Acilan sayfada bodydeki imagelarin uzerine hover yapilir*/
-
-
         //9-Goruntulenen Audios.XXX.pdf baglantilarina tiklanir
-
-        Driver.getDriver().get("https://qa.loyalfriendcare.com/en/Dashboard/Audios");
 
         ReusableMethods.switchToWindow("https://qa.loyalfriendcare.com/Audios/Winning%20in%20PetCare.pdf");
         Assert.assertTrue("https://qa.loyalfriendcare.com/Audios/Winning%20in%20PetCare.pdf".contains("Winning"));
@@ -119,8 +111,7 @@ public class US_031 {
         Driver.getDriver().navigate().back();
 
         ReusableMethods.switchToWindow("https://qa.loyalfriendcare.com/Audios/Amplifying%20pet.pdf");
-        Assert.assertTrue("https://qa.loyalfriendcare.com/Audios/Amplifying%20pet.pdf".contains("Amplifying"));
-        Driver.getDriver().navigate().back();
+        Assert.assertFalse(adminDashboardPage.notFound404.isDisplayed());
 
 
 
