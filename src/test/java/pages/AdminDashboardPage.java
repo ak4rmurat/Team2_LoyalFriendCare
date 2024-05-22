@@ -243,6 +243,27 @@ public class AdminDashboardPage {
     @FindBy(xpath = "//input[@id='search-table']")
     public WebElement searchDoctorsTextbox;
 
+    @FindBy(xpath = "//h2[@class='semi-bold']")
+    public WebElement notFound404;
+
+    @FindBy(xpath = "//*[text()='PowerPoint Presentation']")
+    public WebElement ppPresentationText;
+
+    @FindBy(xpath = "//th[@aria-label='Edit: activate to sort column ascending']")
+    public WebElement doctorsTableEditText; //admin dashboard> doctors> doctors> tablo edit baslıgı
+
+    @FindBy(xpath = "//th[@aria-label='DELETE: activate to sort column ascending']")
+    public WebElement doctorsTableDeleteText; //admin dashboard> doctors> doctors> tablo delete baslıgı
+
+    @FindBy(xpath = "//p[normalize-space()='Dr. Alejandro Martinez']")
+    public WebElement doctorsNameText; //admin dashboard> doctors> doctors> tablo delete baslıgı
+
+    @FindBy(xpath = "//a[@class='btn btn-tag btn-success btn-tag-rounded']")
+    public WebElement doctorsTableAddDoctorsButton; //admin dashboard> doctors> doctors> add doctors buton
+
+    @FindBy(xpath = "//h3[normalize-space()='New Doctors']")
+    public WebElement newDoctorsText; //admin dashboard> doctors> create dcotors> new doctor yazisi
+
     @FindBy(xpath = "//tbody/tr[1]/td[1]")
     public WebElement departmetntsList;
 
@@ -276,8 +297,6 @@ public class AdminDashboardPage {
     @FindBy(xpath = "(//p[@class='bold text-white no-margin fs-10 font-montserrat lh-normal'])[2]")
     public WebElement dashboardAdminText;
 
-
-
     //Admin Dashboard>> Vaccinations Menu
     @FindBy(xpath ="(//span[@class='arrow'])[10]")
     public WebElement vaccinationsAltMenuArrow;//Admin Dashboard>> Vaccinations Menu>>vaccinationsAltMenuArrow
@@ -305,6 +324,7 @@ public class AdminDashboardPage {
 
     @FindBy(xpath = "(//span[text()='Delete'])[1]")
     public WebElement asiDeleteButton;//Admin Dashboard>> Vaccinations Menu>> asiDeleteButton
+
 
 
 
