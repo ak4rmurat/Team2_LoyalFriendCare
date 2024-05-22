@@ -20,11 +20,14 @@ public class US_015 extends TestBaseCross {
         DepartmentsPage departmentsPage=new DepartmentsPage();
         AppointmentBookingPage appointmentBookingPage=new AppointmentBookingPage();
         Actions actions=new Actions(Driver.getDriver());
+
         //1-Kullanıcı URL e gider
         Driver.getDriver().get(ConfigReader.getProperty("url"));
         Assert.assertTrue(userHomePage.loyalFriendCareLogo.isDisplayed());
+
         //2-Header bolumundeki Sign in butonuna tıklar
         userHomePage.signInButton.click();
+
         //3-İlgili boxlara gecerli email adres ve sifre girer,sign in butonuna tıklar
         userHomePage.emailTextBox.sendKeys(ConfigReader.getProperty("userMail"));
         userHomePage.passwordTextBox.sendKeys(ConfigReader.getProperty("userPassword"));
@@ -42,6 +45,7 @@ public class US_015 extends TestBaseCross {
 
         //6-Appointment Booking tarih kismindan gecerli tarih secilir
         appointmentBookingPage.dateTextBox.sendKeys("31.08.2024");
+
         //7-Phone number kutusuna gecerli tel no girilir
         appointmentBookingPage.phoneNumberTextBox.sendKeys("05431111111");
         actions.sendKeys(Keys.SHIFT).perform();
@@ -67,6 +71,7 @@ public class US_015 extends TestBaseCross {
         actions.sendKeys(Keys.ARROW_DOWN).perform();
         actions.sendKeys(Keys.ARROW_DOWN).perform();
         actions.sendKeys(Keys.ENTER).perform();
+
         //10-Appoinment Booking butonuna tıklanır,
         appointmentBookingPage.appointmenbookingButon.click();
         Assert.assertTrue(appointmentBookingPage.appointmentBookingText.isDisplayed());
@@ -79,11 +84,14 @@ public class US_015 extends TestBaseCross {
         DepartmentsPage departmentsPage=new DepartmentsPage();
         AppointmentBookingPage appointmentBookingPage=new AppointmentBookingPage();
         Actions actions=new Actions(Driver.getDriver());
+
         //1-Kullanıcı URL e gider
         Driver.getDriver().get(ConfigReader.getProperty("url"));
         Assert.assertTrue(userHomePage.loyalFriendCareLogo.isDisplayed());
+
         //2-Header bolumundeki Sign in butonuna tıklar
         userHomePage.signInButton.click();
+
         //3-İlgili boxlara gecerli email adres ve sifre girer,sign in butonuna tıklar
         userHomePage.emailTextBox.sendKeys(ConfigReader.getProperty("userMail"));
         userHomePage.passwordTextBox.sendKeys(ConfigReader.getProperty("userPassword"));
@@ -101,6 +109,7 @@ public class US_015 extends TestBaseCross {
 
         //6-Appointment Booking tarih kismindan gecersiz(gecmis) tarih secilir
         appointmentBookingPage.dateTextBox.sendKeys("31.08.2021");
+
         //7-Phone number kutusuna gecersiz tel no girilir
         appointmentBookingPage.phoneNumberTextBox.sendKeys("fgfg");
         actions.sendKeys(Keys.SHIFT).perform();
@@ -126,6 +135,7 @@ public class US_015 extends TestBaseCross {
         actions.sendKeys(Keys.ARROW_DOWN).perform();
         actions.sendKeys(Keys.ARROW_DOWN).perform();
         actions.sendKeys(Keys.ENTER).perform();
+
         //10-Appoinment Booking butonuna tıklanır,
         appointmentBookingPage.appointmenbookingButon.click();
         Assert.assertFalse(appointmentBookingPage.appointmentBookingText.isDisplayed());
@@ -138,11 +148,14 @@ public class US_015 extends TestBaseCross {
         DepartmentsPage departmentsPage=new DepartmentsPage();
         AppointmentBookingPage appointmentBookingPage=new AppointmentBookingPage();
         Actions actions=new Actions(Driver.getDriver());
+
         //1-Kullanıcı URL e gider
         Driver.getDriver().get(ConfigReader.getProperty("url"));
         Assert.assertTrue(userHomePage.loyalFriendCareLogo.isDisplayed());
+
         //2-Header bolumundeki Sign in butonuna tıklar
         userHomePage.signInButton.click();
+
         //3-İlgili boxlara gecerli email adres ve sifre girer,sign in butonuna tıklar
         userHomePage.emailTextBox.sendKeys(ConfigReader.getProperty("userMail"));
         userHomePage.passwordTextBox.sendKeys(ConfigReader.getProperty("userPassword"));

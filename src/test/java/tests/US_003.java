@@ -34,24 +34,24 @@ public class US_003 extends TestBaseCross {
 
         //1- Kullanıcı verilen url e gider
         Driver.getDriver().get(ConfigReader.getProperty("url"));
-      Assert.assertTrue(userHomePage.loyalFriendCareLogo.isDisplayed());
+        Assert.assertTrue(userHomePage.loyalFriendCareLogo.isDisplayed());
 
         //2- Body Departments altında yer alan sekmeleri ve Departments yazısını görüntüler
         Assert.assertTrue(userHomePage.welnessImage.isDisplayed());
         Assert.assertTrue(userHomePage.welnessImage.isEnabled());
-       Assert.assertTrue(userHomePage.dentalCareImage.isDisplayed());
-       Assert.assertTrue(userHomePage.dentalCareImage.isEnabled());
+        Assert.assertTrue(userHomePage.dentalCareImage.isDisplayed());
+        Assert.assertTrue(userHomePage.dentalCareImage.isEnabled());
 
         //3-Departments altında yer alan  sekmelere ve departments yazısına tıklar.Tıklanan sekmelerin ilgili windowa  yönlendirdiği görüntülenir
         userHomePage.welnessImage.click();
-
         Assert.assertEquals(departmentsPage.wellnessDepartmentText.getText(),"Wellness");
         ReusableMethods.wait(3);
         Driver.getDriver().navigate().back();
 
+        //4.Tıklanan sekmelerin ilgili windowa  yönlendirdiği görüntülenir
         userHomePage.dentalCareImage.click();
-       Assert.assertEquals(departmentsPage.dentalCareDepartmentText.getText(),"Dental Care");
-       Driver.getDriver().navigate().back();
+        Assert.assertEquals(departmentsPage.dentalCareDepartmentText.getText(),"Dental Care");
+        Driver.getDriver().navigate().back();
         userHomePage.greenDepartmentsLink.click();
         Assert.assertEquals(departmentsPage.departmentsH1Title.getText(),"Departments");
 
@@ -120,7 +120,7 @@ public class US_003 extends TestBaseCross {
         Assert.assertEquals(vaccinationsPage.rabbiesVaccineText.getText(),"Rabies Vaccine");
         Driver.getDriver().navigate().back();
 
-        userHomePage.drOliviaBennetImage.click();
+        userHomePage.bordetellaImage.click();
         Assert.assertEquals(vaccinationsPage.bordetellaVaccineText.getText(),"Bordetella (Kennel Cough) Vaccine");
         Driver.getDriver().navigate().back();
 

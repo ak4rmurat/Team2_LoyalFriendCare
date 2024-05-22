@@ -360,8 +360,17 @@ public class AdminDashboardPage {
     @FindBy(xpath = "(//span[text()='Delete'])[1]")
     public WebElement asiDeleteButton;//Admin Dashboard>> Vaccinations Menu>> asiDeleteButton
 
+    @FindBy(xpath = "//input[@id='Title_en']")
+    public WebElement doctorsTitleTextBox; //admin dashboard> doctors> create doctors> doctors title textbox
 
+    @FindBy(xpath = "//input[@id='body_en']")
+    public WebElement doctorsContentEnglishTextBox; //admin dashboard> doctors> create doctors> doctors content english textbox
 
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement doctorsSaveeButton; //admin dashboard> doctors> create doctors> doctors save buton
+
+    @FindBy(xpath = "//span[text()='Doctors Store successfully.']")
+    public WebElement doctorsStoreSuccessfullyAlert;
 
 
 

@@ -41,22 +41,22 @@ public class US_035 extends TestBaseCross {
 
         //5-Sayfanın soluna hover yapilir
         adminDashboardPage.dashBoardMenu.click();
-        actions.moveToElement(adminDashboardPage.dashBoardMenu).click();
         Assert.assertTrue(adminDashboardPage.dashBoardMenu.isDisplayed());
 
 
         //6-Acilan dasboardda Roles yazisina tiklanir
+        ReusableMethods.wait(2);
         Assert.assertTrue(adminDashboardPage.rolesButton.isDisplayed());
         adminDashboardPage.rolesButton.click();
 
 
         //7-Alt menuden Create Role yazisina tiklanir
-
+        ReusableMethods.wait(2);
         Assert.assertTrue(adminDashboardPage.createRolesButton.isDisplayed());
         adminDashboardPage.createRolesButton.click();
 
         //8-Create Role sayfasindayken sayfanin sol tarafina hover yapilir
-        actions.moveToElement(adminDashboardPage.dashBoardMenu).perform();
+
         Assert.assertTrue(adminDashboardPage.dashBoardMenu.isDisplayed());
 
         adminDashboardPage.loyalFriendCareFooterLink.click();
@@ -88,17 +88,17 @@ public class US_035 extends TestBaseCross {
         Assert.assertTrue(ConfigReader.getProperty("adminDashboardUrl").contains("admin"));
 
         //5-Sayfanın soluna hover yapilir
-        actions.moveToElement(adminDashboardPage.dashBoardMenu).perform();
+        adminDashboardPage.dashBoardMenu.click();
         Assert.assertTrue(adminDashboardPage.dashBoardMenu.isDisplayed());
 
 
         //6-Acilan dasboardda Tickets yazisina tiklanir
+        ReusableMethods.wait(2);
         Assert.assertTrue(adminDashboardPage.ticketsButton.isDisplayed());
         adminDashboardPage.ticketsButton.click();
 
         //7-Tickets sayfasindayken sayfanin sol tarafina hover yapilir
         adminDashboardPage.dashBoardMenu.click();
-        actions.moveToElement(adminDashboardPage.dashBoardMenu).click();
         Assert.assertTrue(adminDashboardPage.dashBoardMenu.isDisplayed());
 
     }
