@@ -122,8 +122,11 @@ public class US_029 {
         adminDashboardPage.createMedicinesSaveButton.click();
 
 
-
         //Olusturulan ilacin karsisindaki "Delete" butonuna tiklanir.
+
+        adminDashboardPage.deleteMedicinesButton.click();
+
+
 
 
 

@@ -60,6 +60,9 @@ public class AdminDashboardPage {
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement createMedicinesSaveButton; // Admin Dashboard >> Medicines >> Create Medicines
 
+    @FindBy(xpath = "button[type='submit']")
+    public WebElement deleteMedicinesButton; // Admin Dashboard >> Medicines >> Create Medicines
+
     @FindBy(xpath = "//span[normalize-space()='Vaccinations']")
     public WebElement vaccinationsButton; // Admin Dashboard >> Vaccinations
 
