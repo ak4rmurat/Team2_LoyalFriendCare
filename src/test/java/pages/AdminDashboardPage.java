@@ -243,6 +243,35 @@ public class AdminDashboardPage {
     @FindBy(xpath = "//input[@id='search-table']")
     public WebElement searchDoctorsTextbox;
 
+    @FindBy(xpath = "//tbody/tr[1]/td[1]")
+    public WebElement departmetntsList;
+
+    @FindBy(xpath = "//input[@name='parent_id']")
+    public WebElement createDepartmentsBox;
+
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement createDepartmentsDeleteButton;
+
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement createDepartmentsSaveButton;
+
+    @FindBy(xpath = "//tbody/tr[9]/td[1]")
+    public WebElement newDepartments;
+
+    @FindBy(xpath = "//div[@class='alert alert-danger']")
+    public WebElement departmentsSuccessDeleteText;
+
+    @FindBy(xpath = "//a[@class='btn btn-complete btn-cons btn-animated from-left fa fa-edit']")
+    public WebElement createDepartmentsEditButton;
+
+    @FindBy(xpath = "//h3[contains(text(),'Edit')]")
+    public WebElement editDepartmentsEditText;
+
+    @FindBy(xpath = "//input[@name='parent_id']")
+    public WebElement editDepartmentsParentsBox;
+
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement editSaveDepartmentsButton;
 
 
 
