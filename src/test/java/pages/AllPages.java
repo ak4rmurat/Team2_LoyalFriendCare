@@ -1,7 +1,3 @@
-
-
-
-
     package pages;
 
     public class AllPages {
@@ -25,6 +21,9 @@
             }
             return adminDashboardPage;
         }
+
+
+
 
 
     }

@@ -17,7 +17,7 @@ public class US_018  extends TestBaseCross{
 
 
 
-    @Test
+    @Test(groups = "smoke")
     public void TC_001(){
         UserHomePage userHomePage = new UserHomePage();
         MedicinesPage medicinesPage = new MedicinesPage();
@@ -35,7 +35,7 @@ public class US_018  extends TestBaseCross{
        // 6 - Sayfada ilaclari goruntuler
         Assert.assertTrue(medicinesPage.revolutionlMedicineImage.isDisplayed());
         Assert.assertTrue(medicinesPage.rimadylMedicineImage.isDisplayed());
-
+        Driver.quitDriver();
     }
 
     @Test
