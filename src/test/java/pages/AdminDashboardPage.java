@@ -146,7 +146,7 @@ public class AdminDashboardPage {
     @FindBy(xpath = "//div[@id='tableWithSearch_info']")
     public WebElement numberOfRolesText; // Admin Dasboard >> Roles >> Roles
 
-    @FindBy(xpath = "//span[text()='Tickets']")
+    @FindBy(xpath = "//*[@href='https://qa.loyalfriendcare.com/Dashboard/Messages']")
     public WebElement ticketsButton;// Admin Dashboard >> tickets
   
     @FindBy(xpath = "//span[text()='Consultation']")
@@ -359,6 +359,19 @@ public class AdminDashboardPage {
 
     @FindBy(xpath = "(//span[text()='Delete'])[1]")
     public WebElement asiDeleteButton;//Admin Dashboard>> Vaccinations Menu>> asiDeleteButton
+
+    @FindBy(xpath = "//h5[@class='text-white no-margin']")
+    public WebElement ourTicketsText; //Admin Dashboard >> Tickets >> Our Tickets
+
+    @FindBy(xpath = "//*[@src='https://qa.loyalfriendcare.com/images/6628e613c44309475.jpg']")
+    public WebElement adminLogo; //Admindashboard
+
+    @FindBy(xpath = "//*[@class='pull-left']")
+    public WebElement logoutButton; // Admindashboard
+
+
+
+
 
 
 
