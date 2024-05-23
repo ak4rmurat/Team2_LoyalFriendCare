@@ -1,25 +1,21 @@
 package tests;
 
 import com.github.javafaker.Faker;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
-import pages.AppointmentBookingPage;
 import pages.UserHomePage;
-import utilities.ConfigReader;
-import utilities.Driver;
-import utilities.ReusableMethods;
-import utilities.TestBaseCross;
+import utilities.*;
 
-public class US_007 extends TestBaseCross {
+public class US_007 extends TestBaseRapor {
 
 
-   @Test
+   @Test(groups = "smoke")
    public void TC_001() {
+       extentTest = extentReports.createTest("Login Testi",
+               "Kullanici LoyalFriendCare Anasayfasına ulasip, giris yapabilmeli");
        // 1 - Ziyaretci hedef URL'e gider
        Driver.getDriver().get(ConfigReader.getProperty("url"));
+       extentTest.info("Kullanici LoyalFriendCare anasayfaya gider");
        Faker faker = new Faker();
        String name = faker.name().firstName();
        String emailAdress = faker.internet().emailAddress();
@@ -28,17 +24,23 @@ public class US_007 extends TestBaseCross {
        UserHomePage userHomePage = new UserHomePage();
        // 2 - "Sign Up" butonuna tiklar
        userHomePage.signUpButton.click();
+       extentTest.info("Kullanici SignUp butonunu goruntuler ve butonu tiklar.");
+
 
        // 3 - "Name"," E-Mail Address", "Password" ve "Confirm Password" bolumlerine kriterlere uygun bilgileri girer
        userHomePage.userNameKayitTextBox.sendKeys(name);
        userHomePage.emailAddressKayitTextBox.sendKeys(emailAdress);
        userHomePage.newpasswordKayitTextBox.sendKeys(password);
        userHomePage.passwordConfirmKayitTextBox.sendKeys(password);
+       extentTest.info("Kullanici Name, E-Mail Adress, Password ve Confirm Password textboxlari goruntuler ve bilgileri girer");
 
        // 4 - "Sign Up" butonuna tiklar
        userHomePage.signUpKayitButton.click();
+       extentTest.info("Kullanici SıgnUp butonunu goruntuler ve tiklar");
+
        // 5 - Anasayfada "Sign Out" butonu goruntuler
        Assert.assertTrue(userHomePage.signOutButton.isDisplayed());
+       extentTest.pass("Kullanici giris yaptigini goruntuler.");
 
 
    }

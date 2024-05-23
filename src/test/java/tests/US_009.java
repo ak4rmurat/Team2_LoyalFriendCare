@@ -17,6 +17,7 @@ public class US_009 extends TestBaseCross {
     @Test
     public void TC_001(){
         UserHomePage userHomePage = new UserHomePage();
+
         // 1 - Kullanici hedef URL'e gider
         Driver.getDriver().get(ConfigReader.getProperty("url"));
        // 2 - "Sing In" butonuna tiklar
