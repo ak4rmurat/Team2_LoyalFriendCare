@@ -360,6 +360,12 @@ public class AdminDashboardPage {
     @FindBy(xpath = "(//span[text()='Delete'])[1]")
     public WebElement asiDeleteButton;//Admin Dashboard>> Vaccinations Menu>> asiDeleteButton
 
+    @FindBy(xpath = "//input[@id='Title_en']")
+    public WebElement doctorsTitleTextBox; //admin dashboard> doctors> create doctors> doctors title textbox
+
+    @FindBy(xpath = "//input[@id='body_en']")
+    public WebElement doctorsContentEnglishTextBox; //admin dashboard> doctors> create doctors> doctors content english textbox
+
     @FindBy(xpath = "//h5[@class='text-white no-margin']")
     public WebElement ourTicketsText; //Admin Dashboard >> Tickets >> Our Tickets
 
@@ -370,11 +376,11 @@ public class AdminDashboardPage {
     public WebElement logoutButton; // Admindashboard
 
 
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement doctorsSaveeButton; //admin dashboard> doctors> create doctors> doctors save buton
 
-
-
-
-
+    @FindBy(xpath = "//span[text()='Doctors Store successfully.']")
+    public WebElement doctorsStoreSuccessfullyAlert;
 
 
 

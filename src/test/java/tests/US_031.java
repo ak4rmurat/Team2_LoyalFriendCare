@@ -14,13 +14,12 @@ import utilities.ReusableMethods;
 import utilities.TestBaseCross;
 
 public class US_031 extends TestBaseCross {
-    UserHomePage userHomePage=new UserHomePage();
-    AdminDashboardPage adminDashboardPage=new AdminDashboardPage();
-
-
 
     @Test
     public void TC_001(){
+        UserHomePage userHomePage=new UserHomePage();
+        AdminDashboardPage adminDashboardPage=new AdminDashboardPage();
+
         // 1-Kullanıcı URL e gider
         Driver.getDriver().get(ConfigReader.getProperty("url"));
         Assert.assertTrue(userHomePage.loyalFriendCareLogo.isDisplayed());
@@ -35,8 +34,6 @@ public class US_031 extends TestBaseCross {
         userHomePage.loginButton.click();
 
         //4-Acılan anasayfada header kısmında admin adı olan butona tıklanarak admin sayfasina erisilir
-
-
         adminDashboardPage.adminLoginButton.click();
         Assert.assertTrue(ConfigReader.getProperty("adminDashboardUrl").contains("admin"));
 
@@ -46,14 +43,14 @@ public class US_031 extends TestBaseCross {
 
         //6-Acilan dasboardda Consultation yazisina tiklanir
         adminDashboardPage.consultationButton.click();
-        Assert.assertTrue(adminDashboardPage.consultationAltMenuButton.isDisplayed());;
+        Assert.assertTrue(adminDashboardPage.consultationAltMenuButton.isDisplayed());
+
 
         //7-Alt menuden Consultation yazisina tiklanir
         adminDashboardPage.consultationAltMenuButton.click();
         Assert.assertTrue(adminDashboardPage.consultationTitleH5.getText().equalsIgnoreCase("consultation"));
 
         //8-Acilan sayfada headerdaki ve bodydeki imagelarin goruntulenebilir oldugu ve 4 adet oldugu dogrulanir.
-        Driver.getDriver().get("https://qa.loyalfriendcare.com/en/Dashboard/Audios");//tdashboard düzelince sil
         Assert.assertTrue(adminDashboardPage.consultationBaslikImage.isDisplayed());
         Assert.assertTrue(adminDashboardPage.consultationAudioImagesList.get(0).isDisplayed());
         Assert.assertTrue(adminDashboardPage.consultationAudioImagesList.get(1).isDisplayed());
@@ -67,6 +64,8 @@ public class US_031 extends TestBaseCross {
     }
     @Test
     public void TC_002(){
+        UserHomePage userHomePage=new UserHomePage();
+        AdminDashboardPage adminDashboardPage=new AdminDashboardPage();
 
         // 1-Kullanıcı URL e gider
         Driver.getDriver().get(ConfigReader.getProperty("url"));
@@ -113,8 +112,6 @@ public class US_031 extends TestBaseCross {
 
         ReusableMethods.switchToWindow("https://qa.loyalfriendcare.com/Audios/Amplifying%20pet.pdf");
         Assert.assertFalse(adminDashboardPage.notFound404.isDisplayed());
-
-
 
     }
     }
