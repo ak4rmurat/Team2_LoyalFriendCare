@@ -174,5 +174,8 @@ public class UserHomePage {
     @FindBy(xpath = "//div[@class='ml-4 text-lg text-gray-500 uppercase tracking-wider']")
     public WebElement adminOlmayanKullaniciUyarisi;
 
+    @FindBy(xpath = "//*[@href='https://qa.loyalfriendcare.com/en/login']")
+    public WebElement alternatifSignInButton; // User HomePage
+
 
 }
