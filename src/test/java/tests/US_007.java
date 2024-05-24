@@ -43,8 +43,8 @@ public class US_007 extends TestBaseRapor {
 
    }
 
-    @Test(groups = "pozitive")
-    public void TC_002(){
+    @Test(groups = "positive")
+    public void TC_002_Login_Testi(){
         UserHomePage userHomePage = new UserHomePage();
 
         extentTest = extentReports.createTest("Login Testi",

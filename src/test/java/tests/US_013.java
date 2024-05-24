@@ -16,7 +16,7 @@ public class US_013 extends TestBaseRapor {
 
 
     @Test(groups = "smoke")
-    public void TC_1301(){
+    public void TC_1301_Randevu_Olusturma_Testi(){
         extentTest = extentReports.createTest("Randevu Testi",
                 "Kullanici basarili bir sekilde randevu olusturabilmeli");
         UserHomePage userHomePage = new UserHomePage();
@@ -174,7 +174,7 @@ public class US_013 extends TestBaseRapor {
     }
 
     @Test(groups = "smoke")
-    public void TC_1304(){
+    public void TC_1304_Feedback_Olusturma_Testi(){
         extentTest = extentReports.createTest("Feedback Testi",
                 "Kullanici feedback gonderebilmeli");
         UserHomePage userHomePage = new UserHomePage();

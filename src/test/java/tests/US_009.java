@@ -37,8 +37,8 @@ public class US_009 extends TestBaseRapor {
 
     }
 
-    @Test(groups = "pozitive")
-    public void TC_002(){
+    @Test(groups = "positive")
+    public void TC_002_Goruntuleme_Testi(){
         extentTest = extentReports.createTest("Goruntuleme Testi",
                 "Kullanici LoyalFriendCare Anasayfasinin header bolumundeki bolumleri goruntuleyebilmeli ve tiklayabilmeli");
         UserHomePage userHomePage = new UserHomePage();
@@ -91,7 +91,7 @@ public class US_009 extends TestBaseRapor {
         extentTest.info("Kullanici bir onceki sayfaya gider");
         ReusableMethods.wait(2);
         Assert.assertTrue(vaccinationsPage.rabbiesVaccineImage.isDisplayed());
-        extentTest.pass("Kullanici Vaccine'leri goruntuler");
+        extentTest.pass("Kullanici Vaccination'leri goruntuler");
         ReusableMethods.wait(2);
 
 
