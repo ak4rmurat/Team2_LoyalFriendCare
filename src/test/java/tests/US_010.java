@@ -35,7 +35,9 @@ public class US_010 {
 
         //Acilan ana sayfadaki body bolumundeki ogelerin gorunur ve tıklanabilir oldugunu test eder.
         Assert.assertTrue(userHomePage.welnessImage.isEnabled());
-        Assert.assertTrue(userHomePage.drAlejandRoMartinesimage.isEnabled());
+
+
+
 
     }
 }

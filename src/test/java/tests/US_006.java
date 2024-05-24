@@ -3,10 +3,7 @@ package tests;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pages.UserHomePage;
-import utilities.ConfigReader;
-import utilities.Driver;
-import utilities.ReusableMethods;
-import utilities.TestBaseCross;
+import utilities.*;
 
 public class US_006 extends TestBaseCross {
 
@@ -33,7 +30,7 @@ public class US_006 extends TestBaseCross {
 
     }
 
-    @Test
+    @Test()
     public void TC0602(){
         SoftAssert softAssert=new SoftAssert();
         UserHomePage userHomePage=new UserHomePage();

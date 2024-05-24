@@ -1,79 +1,53 @@
 package tests;
 
-import net.bytebuddy.build.Plugin;
-import org.apache.hc.core5.reactor.Command;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
+
 import org.testng.annotations.Test;
 import pages.AllPages;
 import utilities.ConfigReader;
 import utilities.Driver;
-import utilities.ReusableMethods;
-import utilities.TestBaseCross;
+import utilities.TestBaseRapor;
 
-public class US_032  {
 
-    AllPages allPages = new AllPages();
-
+public class US_032  extends TestBaseRapor {
 
     @BeforeMethod
     public void start(){
         AllPages allPages = new AllPages();
 
-        //Kayitli kullanici ilgili Url ile anasayfaya gider.
+        extentTest = extentReports.createTest("Ticket-Our Ticket Testi",
+                "Admin giris yaptiktan sonra Dashboard sayfasinda Ticket bolumunu goruntuler");
         Driver.getDriver().get(ConfigReader.getProperty("url"));
-
-        //Header bolumundeki sign in butonuna tiklar ve login sayfasina gider.
+        extentTest.info("Admin LoyalFriendCare anasayfasine gider.");
         allPages.userHomePage().alternatifSignInButton.click();
-
-        // Login sayfasina girdigini dogrular
+        extentTest.info("Admin anasayfadaki SignIn butonunu goruntuler ve tiklar.");
         assert allPages.userHomePage().emailTextBox.isDisplayed();
-
-        //Kullanici, ilgili kutulara sistemde kayitli  mail ve password'unu girerek sign in butonuna tiklar.
+        extentTest.pass("Admin Login sayfasina ulasir.");
         allPages.userHomePage().emailTextBox.sendKeys(ConfigReader.getProperty("adminMail"));
         allPages.userHomePage().passwordTextBox.sendKeys(ConfigReader.getProperty("adminPassword"));
         allPages.userHomePage().loginButton.click();
-
-        //Admin sayfasina girildigi dogrulanir.
+        extentTest.info("Admin giris bolumlerini goruntuler ve giris yapar.");
         Assert.assertTrue(allPages.adminDashboardPage().adminLoginButton.isDisplayed());
-
-        //Anasayfa header bolumunde bulunan ve uzerinde admin adi yazili olan butona tiklar.
+        extentTest.pass("Admin login butonunu goruntuler");
         allPages.adminDashboardPage().adminLoginButton.click();
-
-        //Acilan admin sayfasinda bulunan sol acilir menu aktif edilir.
+        extentTest.info("Admin login butonuna tiklar.");
         allPages.adminDashboardPage().dashBoardMenu.click();
-        // "Tickets" yazisinin  goruntulendigi dogrulanir.
-
+        extentTest.info("Admin dashboard sayfasina ulasir ve menuye tiklar");
     }
-
-    @AfterMethod
-    public void finish(){
-        Driver.quitDriver();
-    }
-
-
-
-
     @Test
     public void TC_3201() throws InterruptedException {
-
-
-
+        AllPages allPages = new AllPages();
         Assert.assertTrue(allPages.adminDashboardPage().ticketsButton.isEnabled());
-
-
+        extentTest.pass("Admin Tickets yazisini goruntuler");
             }
-
     @Test
     public void TC_3202() throws InterruptedException {
         AllPages allPages = new AllPages();
         allPages.adminDashboardPage().ticketsButton.click();
-
         Assert.assertTrue(allPages.adminDashboardPage().ourTicketsText.isDisplayed());
-
-
+        extentTest.pass("Admin Out Ticket yazisini goruntuler");
     }
 
 
