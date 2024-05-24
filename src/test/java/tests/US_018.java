@@ -8,16 +8,13 @@ import org.testng.asserts.SoftAssert;
 import pages.AppointmentBookingPage;
 import pages.MedicinesPage;
 import pages.UserHomePage;
-import utilities.ConfigReader;
-import utilities.Driver;
-import utilities.ReusableMethods;
-import utilities.TestBaseCross;
+import utilities.*;
 
-public class US_018  extends TestBaseCross{
+public class US_018  extends TestBaseRapor {
 
 
 
-    @Test(groups = "smoke")
+    @Test()
     public void TC_001(){
         UserHomePage userHomePage = new UserHomePage();
         MedicinesPage medicinesPage = new MedicinesPage();
@@ -38,39 +35,73 @@ public class US_018  extends TestBaseCross{
         Driver.quitDriver();
     }
 
-    @Test
+
+
+
+    @Test(groups = "negative")
     public void TC_002(){
+        extentTest = extentReports.createTest("Randevu Testi",
+                "Kullanici gecmis tarihli bir randevu olusturamamali");
         UserHomePage userHomePage = new UserHomePage();
         MedicinesPage medicinesPage = new MedicinesPage();
         AppointmentBookingPage appointmentBookingPage = new AppointmentBookingPage();
-        SoftAssert softAssert = new SoftAssert();
-       // 1 - Kullanici hedef URL'e gider
+
+
         Driver.getDriver().get(ConfigReader.getProperty("url"));
-       // 2 - "Sing In" butonuna tiklar
+        extentTest.info("Kullanici LoyalFriendCare anasayfasina gider.");
+        ReusableMethods.wait(2);
+
         userHomePage.signInButton.click();
-       // 3 - " Sıgn In" ve "Password" bolumlerine kayitli kullanici bilgilerini girer
+        ReusableMethods.wait(2);
+        extentTest.info("Kullanici anasayfadaki SignIn butonuna tiklar");
+
         userHomePage.emailTextBox.sendKeys(ConfigReader.getProperty("userMail"));
+        ReusableMethods.wait(1);
         userHomePage.passwordTextBox.sendKeys(ConfigReader.getProperty("userPassword"));
-       // 4 - "Sign In" butonuna tiklar
+        ReusableMethods.wait(2);
+        extentTest.info("Kullanici gecerli mail ve password bilgilerini girer");
+
+        Assert.assertTrue(userHomePage.loginButton.isEnabled());
+        extentTest.pass("Kullanici login butonunu tiklar");
         userHomePage.loginButton.click();
-       // 5 - Anasaydaki header bolumunden "Medicines"e tiklar
+        ReusableMethods.wait(5);
+
         userHomePage.medicinesDropDown.click();
-       // 6 - Medicines bolumunda "Revolution" a tiklar
+        ReusableMethods.wait(2);
+        extentTest.info("Kullanici anasayfadanin header bolumundeki Medicines'e tiklar");
+
+        Assert.assertTrue(medicinesPage.revolutionlMedicineImage.isDisplayed());
+        extentTest.pass("Kullanici Revulation(Selamectin)'i goruntuler ve tiklar");
         medicinesPage.revolutionlMedicineImage.click();
-       // 7 - Gecmis bir tarih secer
+        ReusableMethods.wait(2);
+
+
+
         appointmentBookingPage.dateTextBox.sendKeys("15052024");
-       // 8 - Telefon numarası, Departman, Doktor ve Message bilgilerini girer
+        ReusableMethods.wait(2);
+
+
         appointmentBookingPage.phoneNumberTextBox.sendKeys("05555555555"+ Keys.TAB + Keys.ARROW_DOWN+
                 Keys.ARROW_DOWN +Keys.ENTER +  Keys.TAB + Keys.ARROW_DOWN + Keys.ARROW_DOWN + Keys.ARROW_DOWN + Keys.ARROW_DOWN+
                 Keys.ENTER + Keys.TAB + "Mesaj bulunuyor");
-       // 9 - "Appointment Booking" e tiklar
         ReusableMethods.wait(5);
+        extentTest.info("Kullanici gerekli bilgileri girer");
         appointmentBookingPage.appointmenbookingButon.click();
-       // 10 - Ekranda hata mesajı alir.
+        ReusableMethods.wait(10);
+
         Assert.assertFalse(appointmentBookingPage.conformationMassage.isDisplayed());
+        extentTest.pass("Kullanici gecmis tarih bilgisiyle randevu olusturamaz");
+
 
 
     }
+
+
+
+
+
+
+
      @Test
     public void TC_003() {
          UserHomePage userHomePage = new UserHomePage();

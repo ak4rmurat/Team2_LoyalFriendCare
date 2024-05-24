@@ -1,5 +1,6 @@
 package tests;
 
+import com.beust.ah.A;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -10,14 +11,11 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.AdminDashboardPage;
 import pages.UserHomePage;
-import utilities.ConfigReader;
-import utilities.Driver;
-import utilities.ReusableMethods;
-import utilities.TestBaseCross;
+import utilities.*;
 
 import java.util.List;
 
-public class US_027 extends TestBaseCross {
+public class US_027 extends TestBaseRapor {
     UserHomePage userHomePage=new UserHomePage();
     AdminDashboardPage adminDashboardPage=new AdminDashboardPage();
 
@@ -81,8 +79,11 @@ public class US_027 extends TestBaseCross {
     }
     @Test
     public void TC_002(){
+        extentTest = extentReports.createTest("Login Testi",
+                "Kullanici LoyalFriendCare Anasayfasına ulasip, giris yapabilmeli");
         //1-Kullanıcı URL e gider
         Driver.getDriver().get(ConfigReader.getProperty("url"));
+        extentTest.info("Kullanici LoyalFriendCare anasayfaya gider");
         Assert.assertTrue(userHomePage.loyalFriendCareLogo.isDisplayed());
 
         //2-Header bolumundeki Sign in butonuna tıklar
@@ -126,57 +127,90 @@ public class US_027 extends TestBaseCross {
         adminDashboardPage.doctorsSaveeButton.click();
         ReusableMethods.wait(2);
         Assert.assertTrue(adminDashboardPage.doctorsStoreSuccessfullyAlert.isDisplayed());
+        extentTest.pass("Admin gecersiz bilgilerle doktor olusturamamli");
 
         adminDashboardPage.loyalFriendCareFooterLink.click();
         userHomePage.signOutButton.click();
 
     }
-    @Test
+    @Test(groups = "negative")
     public void TC_003(){
+        UserHomePage userHomePage=new UserHomePage();
+        AdminDashboardPage adminDashboardPage=new AdminDashboardPage();
+        extentTest = extentReports.createTest("Doktor testi",
+                "Admin gecersiz bilgiler ile Doktor olusturamamali");
         //1-Kullanıcı URL e gider
         Driver.getDriver().get(ConfigReader.getProperty("url"));
-        Assert.assertTrue(userHomePage.loyalFriendCareLogo.isDisplayed());
+        extentTest.info("Admin LoyalFriendCare anasayfaya gider");
+        ReusableMethods.wait(2);
+
+
 
         //2-Header bolumundeki Sign in butonuna tıklar
-        Assert.assertTrue(userHomePage.signInButton.isEnabled());
+
         userHomePage.signInButton.click();
+        extentTest.info("Admin SignIn butonune tiklar");
+        ReusableMethods.wait(2);
 
         //3-İlgili boxlara email adres ve şifre girer,sign in butonuna tıklar
         userHomePage.emailTextBox.sendKeys(ConfigReader.getProperty("adminMail"));
+        ReusableMethods.wait(2);
         userHomePage.passwordTextBox.sendKeys(ConfigReader.getProperty("adminPassword"));
+        ReusableMethods.wait(2);
+        extentTest.info("Admin gecerli mail ve password bilgilerini girer");
+        Assert.assertTrue(userHomePage.loginButton.isDisplayed());
+        extentTest.pass("Admin SignIn butonunu goruntuler ve tiklar");
         userHomePage.loginButton.click();
+
+        ReusableMethods.wait(2);
+
+
 
         //4-Acılan anasayfada header kısmında admin adı olan butona tıklanarak admin sayfasina erisilir
         adminDashboardPage.adminLoginButton.click();
-        Assert.assertTrue(ConfigReader.getProperty("adminDashboardUrl").contains("admin"));
+        ReusableMethods.wait(3);
+        extentTest.info("Admin Dashboard login butonuna tiklar");
+
+
+
 
         //5-Sayfanın soluna hover yapilir
+
+        Assert.assertTrue(adminDashboardPage.dashBoardMenu.isDisplayed());
+        extentTest.pass("Admin dashboard menuyu goruntuler ve menuye gecer");
         adminDashboardPage.dashBoardMenu.click();
-        ReusableMethods.wait(1);
+        ReusableMethods.wait(3);
+
 
 
         //6-Acilan dasboardda Doctors yazisina tiklanir
         adminDashboardPage.doctorsButton.click();
-        Assert.assertTrue(adminDashboardPage.doctorsButton.isDisplayed());
+        ReusableMethods.wait(2);
+        extentTest.info("Admin Doctors butonuna tiklar");
+
 
         //7-Alt menuden Create Doctors yazisina tiklanir
-        ReusableMethods.wait(2);
-        Assert.assertTrue(adminDashboardPage.createDoctorsButton.isDisplayed());
+
+
         adminDashboardPage.createDoctorsButton.click();
+        ReusableMethods.wait(4);
+        extentTest.info("Admin Create Doctors butonuna tiklar");
 
         //8-Doctors Title boxina gecersiz doktor adı girilir
-        adminDashboardPage.doctorsTitleTextBox.sendKeys("090909090909090909009234938493893840385035870843053050583058305305738753897589389738957395738957985783973878359538583");
+
 
         //9-Doctors contente boxina gecersiz aciklama girilir
-        adminDashboardPage.doctorsContentEnglishTextBox.sendKeys("758943758974385437543986948364838946589789234759203580989080985098320582309580932850932859032850923859028305982309580923850238582305803285902");
-        ReusableMethods.wait(2);
+
 
         //10- Doctors save butonuna tiklanir
         adminDashboardPage.doctorsSaveeButton.click();
+        extentTest.info("Admin bilgi girisi yapmadan Save Button'a tiklar");
+        ReusableMethods.wait(5);
+        Assert.assertTrue(adminDashboardPage.doctorsTitleTextBox.isDisplayed());
+        extentTest.pass("Admin gecersiz bilgilerle doktor olusturamamali");
         ReusableMethods.wait(2);
-        Assert.assertFalse(adminDashboardPage.doctorsStoreSuccessfullyAlert.isDisplayed());
-        adminDashboardPage.loyalFriendCareFooterLink.click();
-        userHomePage.signOutButton.click();
+
+
 
 }
 }

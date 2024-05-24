@@ -4,7 +4,7 @@
 
         public AllPages() {
         }
-        private UserHomePage userHomePage;
+        public UserHomePage userHomePage;
         private AdminDashboardPage adminDashboardPage;
 
 
