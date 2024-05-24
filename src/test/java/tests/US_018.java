@@ -39,7 +39,7 @@ public class US_018  extends TestBaseRapor {
 
 
     @Test(groups = "negative")
-    public void TC_002(){
+    public void TC_002_Tarihsiz_Randevu_Testi(){
         extentTest = extentReports.createTest("Randevu Testi",
                 "Kullanici gecmis tarihli bir randevu olusturamamali");
         UserHomePage userHomePage = new UserHomePage();

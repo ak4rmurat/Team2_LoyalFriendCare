@@ -134,7 +134,7 @@ public class US_027 extends TestBaseRapor {
 
     }
     @Test(groups = "negative")
-    public void TC_003(){
+    public void TC_003_Bilgi__Girisi_Yapmadan_Create_Doctor_Testi(){
         UserHomePage userHomePage=new UserHomePage();
         AdminDashboardPage adminDashboardPage=new AdminDashboardPage();
         extentTest = extentReports.createTest("Doktor testi",
